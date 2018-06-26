@@ -174,7 +174,7 @@ footer {
         color: #4CACD1; }
     .login-page .form-container .bottom-form {
       background: #fff;
-      min-height: 33.5vmin;
+      min-height: 460px;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;

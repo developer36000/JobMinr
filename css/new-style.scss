@@ -223,7 +223,8 @@ footer {
 		}
 		.bottom-form {
 			background: $white;
-			min-height: 33.5vmin;
+			//min-height: 33.5vmin;
+			min-height: 460px;
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
