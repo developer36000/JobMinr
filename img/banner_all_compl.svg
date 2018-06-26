@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2723 1937.5 1202 122.3">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        stroke-dasharray: 11.619 11.619;
+      }
+
+      .cls-4 {
+        stroke-dasharray: 12.062 12.062;
+      }
+
+      .cls-5 {
+        stroke-dasharray: 12;
+      }
+    </style>
+  </defs>
+  <g id="Group_22" data-name="Group 22" transform="translate(2723 1937.5)">
+    <circle id="Ellipse_15" data-name="Ellipse 15" class="cls-1" cx="9" cy="9" r="9" transform="translate(0 104.3)"/>
+    <g id="Group_19" data-name="Group 19">
+      <g id="Group_18" data-name="Group 18">
+        <path id="Path_1" data-name="Path 1" class="cls-2" d="M9,113.3a48.77,48.77,0,0,1,1.9-5.7"/>
+        <path id="Path_2" data-name="Path 2" class="cls-3" d="M15.7,97c10.5-19.6,35.5-50.5,90-55.6"/>
+        <path id="Path_3" data-name="Path 3" class="cls-2" d="M111.5,41c2-.1,4-.2,6-.2"/>
+      </g>
+    </g>
+    <g id="Group_21" data-name="Group 21">
+      <g id="Group_20" data-name="Group 20">
+        <path id="Path_4" data-name="Path 4" class="cls-2" d="M1062.6,71.2a55.55,55.55,0,0,0,5.4,2.6"/>
+        <path id="Path_5" data-name="Path 5" class="cls-4" d="M1079.2,78.3c23.5,8,68,16.1,108.3-16.5"/>
+        <path id="Path_6" data-name="Path 6" class="cls-2" d="M1192.1,57.9c1.5-1.3,2.9-2.7,4.4-4.1"/>
+      </g>
+    </g>
+    <path id="Path_7" data-name="Path 7" class="cls-5" d="M210.5,56.8"/>
+    <path id="Path_8" data-name="Path 8" class="cls-5" d="M213,52.3s66.5,43,184.5,43c110,0,161.5-29,161.5-29"/>
+    <path id="Path_9" data-name="Path 9" class="cls-5" d="M649.5,34.8S746.7.5,836.5.5s142.7,29,142.7,29"/>
+    <path id="Path_10" data-name="Path 10" class="cls-1" d="M1202,58.4l-1.9-1-1.9-6.6-6.7,1.7-1.8-1,9.6-2.7Z"/>
+  </g>
+</svg>
