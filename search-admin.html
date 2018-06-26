@@ -14,9 +14,11 @@
     <link rel="stylesheet" href="css/dropdown.css"/>
     <link rel="stylesheet" href="css/transition.css"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/new-style.css"/>
     <link rel="stylesheet" href="css/font-awesome.css"/>
+  
 </head>
-<body class="search-page">
+<body class="search-page admin">
 <header>
     <div class="wrapper">
         <div class="container-fluid">
@@ -140,15 +142,11 @@
                         </div>
                     </form>
                 </div>
-                <div class="content-banner ">
-                </div>
             </div>
             <div class="sidebar-right sticky clearfix">
                 <div>
                     <div id="map" data-lat="31.9880403" data-lng="34.7706276"></div>
                     <button class="btn">Expand</button>
-                </div>
-                <div class="content-banner">
                 </div>
             </div>
 
@@ -182,23 +180,21 @@
                 </div>
                 <div class="wrapper">
 
-                    <div class="content-banner">
-                    </div>
-
+                  
                 </div>
                 <div class="wrapper">
 
-                    <div class="filter ">
+                    <div class="filter admin">
                         <form action="">
                             <div class="btn-group">
                                 <div class="field-wrap sel-wrap sel-wrap-default">
-                                    <button class="btn email-btn">Email me jobs like these</button>
+                                    <h2 class="filter-title">Email me jobs like these</h2>
                                 </div>
                                 <div class="field-wrap sel-wrap sel-wrap-default">
-                                    <button class="btn clear-btn">Clear Filter</button>
+                                    <button class="btn stop-btn">Stop Receiving Job Emails</button>
                                 </div>
                             </div>
-                            <div class="field-wrap sel-wrap sel-wrap-default">
+                            <div class="field-wrap sel-wrap sel-wrap-default filter-row">
                                 <select class="ui fluid search dropdown" multiple="">
                                     <option value="">Skills</option>
                                     <option value="angular">php</option>
@@ -206,6 +202,18 @@
                                     <option value="design">UI</option>
                                     <option value="ember">UX</option>
                                 </select>
+                            </div>
+                            <div class="field-wrap sel-wrap sel-wrap-default filter-row">
+                                <select class="ui fluid search dropdown" multiple="">
+                                    <option value="">Skills</option>
+                                    <option value="angular">php</option>
+                                    <option value="css">CSS</option>
+                                    <option value="design">UI</option>
+                                    <option value="ember">UX</option>
+                                </select>
+                            </div>
+                            <div class="btn-group add-btn-wrap">
+                                <button class="btn add-btn">Add Search</button>
                             </div>
                         </form>
                     </div>
@@ -663,9 +671,18 @@
             </div>
         </div>
     </div>
-    <div class="content-banner">
+    
+    <div class="pre-footer">
+        
+        <div class="col-md-6 look">
+            I'm ready to <strong>LOOK FOR A JOB</strong><i class="fa fa-angle-double-right"
+                                                           aria-hidden="true"></i>
+        </div>
+        <div class="col-md-6 post">
+            Need to <strong>POST A JOB?</strong><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+        </div>
+    
     </div>
-
 
 </main>
 <footer>
