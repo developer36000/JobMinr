@@ -15,9 +15,6 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
   background: #4CACD1; }
 
-footer {
-  background: #F6FDFF; }
-
 .search-page.admin .add-btn-wrap {
   justify-content: flex-end; }
   @media screen and (max-width: 768px) {
@@ -31,7 +28,8 @@ footer {
   font-family: Roboto, Regular, sans-serif; }
 
 .add-btn,
-.stop-btn {
+.stop-btn,
+.btn-card {
   max-width: 173px;
   width: 100%;
   min-height: 50px;
@@ -56,6 +54,17 @@ footer {
   @media screen and (max-width: 768px) {
     .add-btn {
       margin-right: auto; } }
+
+.btn-card {
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+  .btn-card:hover {
+    color: #4CACD1;
+    background: transparent;
+    border: 1px solid #4CACD1; }
 
 .btn-soc-login {
   font-family: Roboto, Regular, sans-serif;
@@ -134,138 +143,141 @@ footer {
     align-items: center;
     justify-content: center;
     min-height: 85vh; }
-  .login-page .form-container {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.16); }
-    .login-page .form-container .form-title {
-      font-family: "Montserrat-SemiBold", sans-serif;
-      text-transform: uppercase;
-      font-size: 3.8rem;
-      letter-spacing: 1px;
-      line-height: 50px;
-      margin-bottom: 15px; }
-    .login-page .form-container .form-sub-title {
+  .login-page footer {
+    background: #F6FDFF; }
+
+.form-container {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.16); }
+  .form-container .form-title {
+    font-family: "Montserrat-SemiBold", sans-serif;
+    text-transform: uppercase;
+    font-size: 3.8rem;
+    letter-spacing: 1px;
+    line-height: 50px;
+    margin-bottom: 15px; }
+  .form-container .form-sub-title {
+    font-family: "Montserrat-Regular", sans-serif;
+    font-size: 22px;
+    line-height: 29px;
+    margin-top: 0; }
+    .form-container .form-sub-title a {
       font-family: "Montserrat-Regular", sans-serif;
-      font-size: 22px;
-      line-height: 29px;
-      margin-top: 0; }
-      .login-page .form-container .form-sub-title a {
-        font-family: "Montserrat-Regular", sans-serif;
-        font-size: inherit;
-        line-height: inherit;
-        display: inline-block;
-        text-decoration: underline;
-        color: #4CACD1; }
-    .login-page .form-container .top-form {
-      background: #303E4B;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 15px;
-      background: url("../img/bg2.png") no-repeat 50% 50%;
-      -webkit-background-size: cover;
-      background-size: cover;
-      min-height: 18vmin; }
-      .login-page .form-container .top-form * {
-        color: #fff; }
-      .login-page .form-container .top-form a {
-        color: #4CACD1; }
-    .login-page .form-container .bottom-form {
-      background: #fff;
-      min-height: 460px;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      justify-content: center;
-      padding-bottom: 30px;
-      padding-top: 30px; }
-      .login-page .form-container .bottom-form .container {
-        width: 100%;
-        max-width: 85%; }
-        .login-page .form-container .bottom-form .container .row {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          align-items: center;
-          justify-content: center; }
-      .login-page .form-container .bottom-form .socials-group {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end; }
-        @media screen and (max-width: 768px) {
-          .login-page .form-container .bottom-form .socials-group {
-            align-items: center; } }
-      .login-page .form-container .bottom-form .login-form .form-group {
+      font-size: inherit;
+      line-height: inherit;
+      display: inline-block;
+      text-decoration: underline;
+      color: #4CACD1; }
+  .form-container .top-form {
+    background: #303E4B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: url("../img/bg2.png") no-repeat 50% 50%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    min-height: 18vmin; }
+    .form-container .top-form * {
+      color: #fff; }
+    .form-container .top-form a {
+      color: #4CACD1; }
+  .form-container .bottom-form {
+    background: #fff;
+    min-height: 460px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 30px;
+    padding-top: 30px; }
+    .form-container .bottom-form .container {
+      width: 100%;
+      max-width: 85%; }
+      .form-container .bottom-form .container .row {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
-        opacity: 1;
-        transition: all .3s; }
-        .login-page .form-container .bottom-form .login-form .form-group:first-child {
-          margin-bottom: 30px; }
-        .login-page .form-container .bottom-form .login-form .form-group:hover {
-          opacity: .6; }
-      .login-page .form-container .bottom-form .login-form i.fa,
-      .login-page .form-container .bottom-form .login-form i.fas {
-        font-size: 25px;
-        color: #303E4B;
-        padding-right: 12px; }
-      .login-page .form-container .bottom-form .login-form input {
-        border-radius: 0;
-        border: 0;
-        border-bottom: 1px solid #959595;
-        transition: all .3s;
-        font-family: "Montserrat-Regular", sans-serif;
-        font-size: 18px;
-        letter-spacing: 1px;
-        line-height: 24px; }
-        .login-page .form-container .bottom-form .login-form input:focus, .login-page .form-container .bottom-form .login-form input:hover {
-          border-bottom: 1px solid #4CACD1;
-          box-shadow: none;
-          outline: none;
-          color: #4CACD1; }
-      .login-page .form-container .bottom-form .login-form .remember-me label {
-        color: #303E4B;
-        font-size: 16px;
-        line-height: 21px;
-        letter-spacing: 1px;
-        text-align: left;
-        position: relative;
-        padding-left: 30px;
-        font-weight: 400; }
-        .login-page .form-container .bottom-form .login-form .remember-me label:before {
-          content: "";
-          display: inline-block;
-          width: 22px;
-          height: 22px;
-          position: absolute;
-          top: 0;
-          left: 0;
-          border: 1px solid #303E4B;
-          border-radius: 3px;
-          transition: all .3s;
-          font-size: 25px;
-          line-height: 25px; }
-      .login-page .form-container .bottom-form .login-form .remember-me input[type=checkbox] {
-        opacity: 0;
-        position: absolute;
-        clip: rect(0, 0, 0, 0);
-        padding: 0;
-        margin: 0; }
-      .login-page .form-container .bottom-form .login-form .remember-me input[type=checkbox]:checked + label:before {
-        content: "\f046";
-        font-family: FontAwesome, sans-serif;
+        justify-content: center; }
+    .form-container .bottom-form .socials-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end; }
+      @media screen and (max-width: 768px) {
+        .form-container .bottom-form .socials-group {
+          align-items: center; } }
+    .form-container .bottom-form .login-form .form-group {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      opacity: 1;
+      transition: all .3s; }
+      .form-container .bottom-form .login-form .form-group:first-child {
+        margin-bottom: 30px; }
+      .form-container .bottom-form .login-form .form-group:hover {
+        opacity: .6; }
+    .form-container .bottom-form .login-form i.fa,
+    .form-container .bottom-form .login-form i.fas {
+      font-size: 25px;
+      color: #303E4B;
+      padding-right: 12px; }
+    .form-container .bottom-form .login-form input {
+      border-radius: 0;
+      border: 0;
+      border-bottom: 1px solid #959595;
+      transition: all .3s;
+      font-family: "Montserrat-Regular", sans-serif;
+      font-size: 18px;
+      letter-spacing: 1px;
+      line-height: 24px; }
+      .form-container .bottom-form .login-form input:focus, .form-container .bottom-form .login-form input:hover {
+        border-bottom: 1px solid #4CACD1;
+        box-shadow: none;
+        outline: none;
+        color: #4CACD1; }
+    .form-container .bottom-form .login-form .remember-me label {
+      color: #303E4B;
+      font-size: 16px;
+      line-height: 21px;
+      letter-spacing: 1px;
+      text-align: left;
+      position: relative;
+      padding-left: 30px;
+      font-weight: 400; }
+      .form-container .bottom-form .login-form .remember-me label:before {
+        content: "";
         display: inline-block;
-        border: none;
-        background: transparent;
-        color: #53B743;
-        line-height: 25px;
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid #303E4B;
+        border-radius: 3px;
+        transition: all .3s;
         font-size: 25px;
-        text-align: center; }
+        line-height: 25px; }
+    .form-container .bottom-form .login-form .remember-me input[type=checkbox] {
+      opacity: 0;
+      position: absolute;
+      clip: rect(0, 0, 0, 0);
+      padding: 0;
+      margin: 0; }
+    .form-container .bottom-form .login-form .remember-me input[type=checkbox]:checked + label:before {
+      content: "\f046";
+      font-family: FontAwesome, sans-serif;
+      display: inline-block;
+      border: none;
+      background: transparent;
+      color: #53B743;
+      line-height: 25px;
+      font-size: 25px;
+      text-align: center; }
 
 .text-or {
   color: #303E4B;
@@ -274,5 +286,85 @@ footer {
   letter-spacing: 1px;
   line-height: 50px;
   text-transform: uppercase; }
+
+.company-page {
+  background: rgba(76, 172, 209, 0.08); }
+  .company-page main {
+    margin-top: 40px;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 85vh; }
+  .company-page footer {
+    background: #FFFFFF; }
+
+.title-wrap {
+  background: #303E4B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: url("../img/bg2.png") no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-height: 17.1vmin;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px; }
+  .title-wrap * {
+    color: #fff;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 38px;
+    letter-spacing: 1px;
+    line-height: 50px; }
+  .title-wrap a, .title-wrap span {
+    color: #4CACD1; }
+
+.cards-row {
+  margin-bottom: 20px; }
+
+.card-box {
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  padding: 15px 20px;
+  min-height: 265px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start; }
+  .card-box h2, .card-box h3, .card-box h4, .card-box h5, .card-box h6 {
+    font-family: "Montserrat-SemiBold", sans-serif;
+    color: #303E4B;
+    text-transform: uppercase;
+    margin-top: 0; }
+  .card-box p {
+    font-family: Roboto, Regular, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #303E4B;
+    margin-bottom: 0; }
+  .card-box.centered h2, .card-box.centered h3, .card-box.centered h4, .card-box.centered h5, .card-box.centered h6 {
+    text-align: center; }
+  .card-box.centered p {
+    text-align: left; }
+  .card-box.centered .btn-card {
+    margin: 0 auto; }
+  .card-box .content {
+    width: 100%; }
+
+.card-title,
+.card-sub-title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 22px;
+  line-height: 29px;
+  color: #303E4B; }
+
+.card-sub-title {
+  font-size: 22px;
+  text-transform: inherit; }
 
 /*# sourceMappingURL=new-style.css.map */
