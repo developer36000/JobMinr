@@ -7,12 +7,7 @@ $(window).bind('load resize orientationChange', function () {
 	var pos =  $admin_sidebar.position();
 	var	width = (($(window).width() - $page_container.width())/2);
 	var sidebar = $admin_sidebar.width();
-	console.log($(window).width() - pos.left);
-	console.log($admin_sidebar.width() -1);
-	console.log(pos);
-	console.log(width);
-	
-	
+
 	if (width < sidebar) {
 		$page_container.css('margin-left', sidebar);
 		$page_header.css('margin-left', sidebar);
