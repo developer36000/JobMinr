@@ -1,3 +1,25 @@
+var $admin_sidebar = $('.admin-sidebar-wrap'), // only search once
+	$page_container = $('.job-wrapper > .main-content');
+	$page_header = $('header > .wrapper');
+
+$(window).bind('load resize orientationChange', function () {
+	
+	var pos =  $admin_sidebar.position();
+	var	width = (($(window).width() - $page_container.width())/2);
+	var sidebar = $admin_sidebar.width();
+	console.log($(window).width() - pos.left);
+	console.log($admin_sidebar.width() -1);
+	console.log(pos);
+	console.log(width);
+	
+	
+	if (width < sidebar) {
+		$page_container.css('margin-left', sidebar);
+		$page_header.css('margin-left', sidebar);
+	}
+	
+});
+
 $.each($('.search-module .sel-wrap-default select'), function (index) {
     $(this).select2({
         minimumResultsForSearch: Infinity,
@@ -16,6 +38,15 @@ $.each($('.filtered .sel-wrap-default select'), function (index) {
 });
 
 $.each($('.sidebar-left .sel-wrap-default select'), function (index) {
+    $(this).select2({
+        minimumResultsForSearch: Infinity,
+        dropdownParent: $('.sidebar-left'),
+        dropdownCssClass: 'search-module-drowpdown-' + index
+
+    });
+});
+
+$.each($('.sidebar.sel-wrap-default select'), function (index) {
     $(this).select2({
         minimumResultsForSearch: Infinity,
         dropdownParent: $('.sidebar-left'),
@@ -80,7 +111,7 @@ $('select.dropdown').dropdown('set selected', ['php','UI']);
 
 $('.checkdown').click(function() {
     var $this = $(this);
-    $this.removeClass('open')
+    $this.removeClass('open');
     if ($this.hasClass('active')) {
         $this.removeClass('active');
     } else if ($this.hasClass('inactive')) {
