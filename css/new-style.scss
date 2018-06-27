@@ -6,6 +6,7 @@ $gray-bg: #FBFBFB;
 $roboto: Roboto, Regular, sans-serif;
 $monts-reg: 'Montserrat-Regular', sans-serif;
 $monts-semi: 'Montserrat-SemiBold', sans-serif;
+$monts-light: 'Montserrat-Light', sans-serif;
 $green:#53B743;
 // social
 $fb: #4B60B2; // facebook
@@ -83,11 +84,13 @@ body::-webkit-scrollbar-thumb {
 	}
 }
 .btn-card {
+	font-family: $roboto;
 	border: 1px solid transparent;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+	font-weight: 500;
 	&:hover {
 		color: $blue;
 		background: transparent;
@@ -444,6 +447,33 @@ body::-webkit-scrollbar-thumb {
 	.content {
 		width: 100%;
 	}
+	.form-group {
+		@media screen and (max-width: 768px) {
+			margin-bottom: 15px;
+		}
+		input {
+			border-radius: 0;
+			border: 0;
+			border-bottom: 1px solid rgba(48, 62, 75, 0.6);
+			transition: all .3s;
+			font-family: $monts-light;
+			font-size: 16px;
+			letter-spacing: 1px;
+			line-height: 21px;
+			margin-bottom: 15px;
+			&:focus,
+			&:hover {
+				border-bottom: 1px solid $blue;
+				box-shadow: none;
+				outline: none;
+				color: $dark;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
 }
 .card-title,
 .card-sub-title{

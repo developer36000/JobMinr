@@ -56,11 +56,13 @@ body::-webkit-scrollbar-thumb {
       margin-right: auto; } }
 
 .btn-card {
+  font-family: Roboto, Regular, sans-serif;
   border: 1px solid transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center; }
+  text-align: center;
+  font-weight: 500; }
   .btn-card:hover {
     color: #4CACD1;
     background: transparent;
@@ -354,6 +356,26 @@ body::-webkit-scrollbar-thumb {
     margin: 0 auto; }
   .card-box .content {
     width: 100%; }
+  @media screen and (max-width: 768px) {
+    .card-box .form-group {
+      margin-bottom: 15px; } }
+  .card-box .form-group input {
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid rgba(48, 62, 75, 0.6);
+    transition: all .3s;
+    font-family: "Montserrat-Light", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 21px;
+    margin-bottom: 15px; }
+    .card-box .form-group input:focus, .card-box .form-group input:hover {
+      border-bottom: 1px solid #4CACD1;
+      box-shadow: none;
+      outline: none;
+      color: #303E4B; }
+    .card-box .form-group input:last-child {
+      margin-bottom: 0; }
 
 .card-title,
 .card-sub-title {
