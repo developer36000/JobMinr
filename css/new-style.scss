@@ -571,10 +571,40 @@ body::-webkit-scrollbar-thumb {
 		margin-top: 15px;
 	}
 }
+.admin-button {
+	width: 72px;
+	height: 72px;
+	line-height: 65px;
+	padding: 10px;
+	text-align: center;
+	background-color: #303E4B;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+	position: fixed;
+	z-index: 900;
+	top: 95px;
+	left: 0;
+//	display: none;
+	box-shadow: 0 7px 17px -11px #000000;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	.fa {
+		font-size: 35px;
+	}
+	&:hover{
+		background-color: #4CACD1;
+		color: #fff;
+		-webkit-transition: all .3s;
+		transition: all .3s;
+	}
+}
 .admin-sidebar-wrap {
 	position: fixed;
+	z-index: 1000;
 	top: 80px;
 	bottom: 0;
+	left: -100%;
 //	overflow-x: hidden;
 	//overflow-y: scroll;
 	height: 100vh;
@@ -584,6 +614,25 @@ body::-webkit-scrollbar-thumb {
 	max-width: 337px;
 	width: 100%;
 	padding: 15px 10px 15px 25px;
+	transition: all .3s;
+	&.show {
+		display: flex;
+		left: 0;
+	}
+	& .close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		color: $dark;
+		opacity: 1;
+		z-index: 10000;
+		i, .fa {
+			color: $dark;
+			&:before {
+				color: $dark;
+			}
+		}
+	}
 	.sidebar {
 		position: relative;
 		width: 100%;
@@ -598,7 +647,7 @@ body::-webkit-scrollbar-thumb {
 			color: $dark;
 			margin-bottom: 20px;
 			text-align: center;
-			margin-top: 0;
+			margin-top: 15px;
 		}
 		.block-name {
 			font-family: $monts-reg;

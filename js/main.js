@@ -103,7 +103,20 @@ $(document).ready(function(){
         $('html, body').animate({scrollTop : 0},800);
         return false;
     });
-
+    
+    $('.admin-button').on('click', function (e) {
+        e.preventDefault();
+        $('.admin-sidebar-wrap').addClass('show');
+        $(this).fadeOut();
+    });
+    
+	$('.admin-sidebar-wrap > .close').on('click', function (e) {
+		e.preventDefault();
+		$('.admin-sidebar-wrap').removeClass('show');
+		$('.admin-button').fadeIn();
+	});
+    
+    
 });
 $('select.dropdown').dropdown('set selected', ['php','UI']);
 
