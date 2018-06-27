@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="css/select2.css"/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/new-style.css"/>
 </head>
-<body class="index-page">
+<body class="job-page admin">
 <header>
     <div class="wrapper">
         <div class="container-fluid">
@@ -43,717 +44,401 @@
                                 <a href="" class="rec-btn">Recruiting?</a>
                             </div>
                         </div>
-
+                    
                     </nav>
                 </div>
-
+            
             </div>
         </div>
     </div>
 </header>
 <main>
-    <div class="top-box">
-        <div class="bg-home" style="background-image: url('img/main_bg.png')">
-            <div class="wrapper">
-                <h2>ONLY HIGH QUALITY JOB LISTINGS</h2>
-                <div class="description">
-                    We only have complete data form company websites. This means no jobs are posted from aggregation
-                    websites or recruiters.
-                </div>
-                <div class="search-module">
-                    <div class="container-fluid">
-                        <form action="">
-                            <h3>Find a job</h3>
-                            <div class="field-wrap sel-wrap sel-wrap-default city">
-                                <label>What...</label>
-                                <input type="text" placeholder='e.g."Web Developer"' style="width: 100%">
+    <div class="job-wrapper clearfix">
+        <div class="admin-sidebar-wrap">
+            <div id="admni-sidebar" class="sidebar sidebar-left clearfix">
+                <div class="job-niches">
+                    <h3 class="sidebar-title">Admin Panel</h3>
+                    <h4 class="block-name">Job Niche</h4>
+                    <form action="">
+                        <div class="field-wrap sel-wrap sel-wrap-default grey search">
+                            <select class="ui fluid search dropdown" data-placeholder='Skills' multiple="">
+            
+                                <option value="php">php</option>
+                                <option value="css">CSS</option>
+                                <option value="UI">UI</option>
+                                <option value="UX">UX</option>
+                            </select>
+                        </div>
+                        <div class="field-wrap sel-wrap sel-wrap-default job-type">
+                            <div class="dropdown checkdown ">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
+                                    Job Type
+                                </button>
+                                <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                                    <div class="field-wrap sel-wrap sel-wrap-default">
+                                        <input id="checkbox1" type="checkbox"> <label for="checkbox1">Full-time</label>
+                                    </div>
+                                    <div class="field-wrap sel-wrap sel-wrap-default">
+                                        <input id="checkbox2" type="checkbox"> <label for="checkbox2"> Contract</label>
+                                    </div>
+                                    <div class="field-wrap sel-wrap sel-wrap-default">
+                                        <input id="checkbox3" type="checkbox"> <label for="checkbox3"> Permanant</label>
+                                    </div>
+                                    <div class="field-wrap sel-wrap sel-wrap-default">
+                                        <input id="checkbox4" type="checkbox" checked> <label for="checkbox4"> Part
+                                        Time</label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="field-wrap sel-wrap sel-wrap-default location">
-                                <label>Where...</label>
-                                <input type="text" placeholder='e.g."Sydney"' style="width: 100%">
-                                <select id="location" data-placeholder='+10km' style="width: 100%">
-                                    <option value=""></option>
-                                    <option value="1">+10km</option>
-                                    <option value="2">+20km</option>
-                                    <option value="3">+30km</option>
-                                    <option value="4">+40km</option>
-                                </select>
+                        </div>
+                
+                        <div class="field-wrap sel-wrap sel-wrap-default grey">
+                            <div class="dropdown checkdown drop2">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3"
+                                        data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
+                                    Industry
+                                </button>
+                                <div class="dropdown-menu " aria-labelledby="dropdownMenuButton3">
+                                    <div class="field-wrap sel-wrap sel-wrap-default">
+                                        <input id="checkbox13" type="checkbox"> <label for="checkbox13">Full-time</label>
+                                    </div>
+                                    <div class="field-wrap sel-wrap sel-wrap-default">
+                                        <input id="checkbox23" type="checkbox"> <label for="checkbox23"> Contract</label>
+                                    </div>
+                                    <div class="field-wrap sel-wrap sel-wrap-default">
+                                        <input id="checkbox33" type="checkbox"> <label for="checkbox33"> Permanant</label>
+                                    </div>
+                                    <div class="field-wrap sel-wrap sel-wrap-default">
+                                        <input id="checkbox43" type="checkbox" checked> <label for="checkbox41"> Part
+                                        Time</label>
+                                    </div>
+                                </div>
                             </div>
-                            <button class="btn">Search</button>
-                        </form>
-                    </div>
+                
+                        </div>
+                        <div class="field-wrap sel-wrap sel-wrap-default grey">
+                            <div class="dropdown checkdown ">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                        data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
+                                    Company
+                                </button>
+                                <div class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
+                                    <div class="field-wrap sel-wrap sel-wrap-default">
+                                        <input id="checkbox11" type="checkbox"> <label for="checkbox11">Full-time</label>
+                                    </div>
+                                    <div class="field-wrap sel-wrap sel-wrap-default">
+                                        <input id="checkbox21" type="checkbox"> <label for="checkbox21"> Contract</label>
+                                    </div>
+                                    <div class="field-wrap sel-wrap sel-wrap-default">
+                                        <input id="checkbox31" type="checkbox"> <label for="checkbox31"> Permanant</label>
+                                    </div>
+                                    <div class="field-wrap sel-wrap sel-wrap-default">
+                                        <input id="checkbox41" type="checkbox" checked> <label for="checkbox41"> Part
+                                        Time</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field-wrap sel-wrap sel-wrap-default grey search">
+                            <select class="ui fluid search dropdown" data-placeholder='Skills' multiple="">
+                        
+                                <option value="php">php</option>
+                                <option value="css">CSS</option>
+                                <option value="UI">UI</option>
+                                <option value="UX">UX</option>
+                            </select>
+                        </div>
+                    </form>
                 </div>
+                
             </div>
         </div>
-    </div>
-    <div class="content-box">
-        <div class="wrapper">
-            <h3>OUR FEATURED JOBS</h3>
-            <div class="sub-title">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
-            </div>
-            <div class="item-grid">
-                <div class="item">
-                    <div class="item-logo">
-                        <img src="img/item1.png">
-                    </div>
-                    <div class="technology">
-                        <h4>Senior Web Designer</h4>
-                        <h5>Openlane</h5>
-                        <ul>
-                            <li>php</li>
-                            <li>UX</li>
-                            <li>UI</li>
-                        </ul>
-                    </div>
-                    <div class="location">
-                        <span><i class="fa fa-map-marker" aria-hidden="true"></i>UK, Canada</span>
-                        <div class="count">4 application</div>
-                    </div>
-                    <div class="time">
-                        <span>Full time</span>
-                    </div>
-                    <div class="post-time">
-                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>1 Dayago</span>
-                    </div>
-                    <div class="views">
-                        <span><i class="fa fa-eye" aria-hidden="true"></i>38 views</span>
-                        <div class="option">
-                            <a href="#" class="share"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
-                            <a href="#" class="expand"><i class="fa fa-angle-double-down" aria-hidden="true"></i> Expand</a>
-                            <span class="save">Save</span>
+       
+        <div class="wrapper main-content">
+            <div class="container">
+                <div class="wrapper">
+                   <div class="row">
+                       <div class="col-xs-12 col-lg-8">
+                           <div class="job-body">
+                               <div class="job-header">
+                                   <div class="item-logo col-xs-12 col-md-2">
+                                       <img src="img/item1.png">
+                                   </div>
+                                   <div class="technology col-xs-12 col-md-4">
+                                       <h4>Senior Web Designer</h4>
+                                       <h5>Openlane</h5>
+                                       <div class="count">4 application</div>
+                                       <ul class="skills">
+                                           <li>php</li>
+                                           <li>UX</li>
+                                           <li>UI</li>
+                                       </ul>
+                                   </div>
+                                   <div class="col-xs-12 col-md-3 about">
+                                       <div class="location">
+                                           <span><i class="fa fa-map-marker" aria-hidden="true"></i>UK, Canada</span>
+                                       </div>
+                                       <div class="time">
+                                           <span>Full time</span>
+                                       </div>
+                                       <div class="post-time">
+                                           <span><i class="fa fa-clock-o" aria-hidden="true"></i>1 Dayago</span>
+                                       </div>
+                                       <div class="views">
+                                           <span><i class="fa fa-eye" aria-hidden="true"></i>38 views</span>
+                                       </div>
+                                   </div>
+                                   <div class="col-xs-12 watch col-md-3">
+                                       <div class="option">
+                                           <a href="#" class="btn btn-view">View</a>
+                                           <a href="#" class="btn btn-save">
+                                               <i class="fa fa-star" aria-hidden="true"></i>
+                                               Save
+                                           </a>
+                                           <a href="#" class="btn btn-expand">
+                                               <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                                               Expand
+                                           </a>
+                                           <a href="#" class="btn btn-share">
+                                               <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                               Share
+                                           </a>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="job-description">
+                                   <p>
+                                       We’re looking for an experienced UI Designer to join our team in Canada. As a designer at
+                                       New
+                                       Haircut, you will need to create visually appealing interactive prototypes for web & mobile
+                                       digital
+                                       products. You’ll be working side by side with the client, product managers, engineers,
+                                       researchers,
+                                       and other designers.
+                                   </p>
+                                   <h4>Skills:</h4>
+                                   <ul class="skills">
+                                       <li>php</li>
+                                       <li>UX</li>
+                                       <li>UI</li>
+                                   </ul>
+                                   <h4>Qualifications:</h4>
+                                   <p>
+                                       Demonstrable UI design skills with a strong portfolio<br>
+                                       +3 year experience in web and/or mobile applications design<br>
+                                       Strong talent for visual design, layout, and typography with excellent attention to
+                                       detail<br>
+                                       Proficiency in tools such as Sketch, InVision, Photoshop & Illustrator<br>
+                                       Communication: strong writing and presentation skills <br>
+                                       Problem Solving: ability to solve problems creatively and effectively <br>
+                                       Mindset: a clear understanding of the importance of user-centered design; willingness to
+                                       seek
+                                       and receive feedback; ability to self-manage and autonomy <br>
+                                       Up-to-date with the latest design trends, techniques, and best practices.<br>
+                                       Proficient in English<br>
+                                       Willing to travel internationally:20%
+                                   </p>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-xs-12 col-lg-4">
+                           <div class="content-banner">
+                           </div>
+                       </div>
+                   </div>
+                    <div class="row content-box featured-job clearfix">
+                        <div class="wrapper">
+                            <h3>RECOMMENDED JOBS</h3>
+                            <div class="item-grid">
+                                <div class="item">
+                                    <div class="item-logo">
+                                        <img src="img/item1.png">
+                                    </div>
+                                    <div class="technology">
+                                        <h4>Senior Web Designer</h4>
+                                        <h5>Openlane</h5>
+                                        <ul>
+                                            <li>php</li>
+                                            <li>UX</li>
+                                            <li>UI</li>
+                                        </ul>
+                                    </div>
+                                    <div class="location">
+                                        <span><i class="fa fa-map-marker" aria-hidden="true"></i>UK, Canada</span>
+                                        <div class="count">4 application</div>
+                                    </div>
+                                    <div class="time">
+                                        <span>Full time</span>
+                                    </div>
+                                    <div class="post-time">
+                                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>1 Dayago</span>
+                                    </div>
+                                    <div class="views">
+                                        <span><i class="fa fa-eye" aria-hidden="true"></i>38 views</span>
+                                        <div class="option">
+                                            <a href="#" class="share"><i class="fa fa-share-alt"
+                                                                         aria-hidden="true"></i>Share</a>
+                                            <a href="#" class="expand"><i class="fa fa-angle-double-down"
+                                                                          aria-hidden="true"></i>
+                                                Expand</a>
+                                            <span class="save">Save</span>
+                                        </div>
+                                    </div>
+                
+                                    <div class="watch">
+                                        <button class="view-button btn">View</button>
+                
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-logo">
+                                        <img src="img/item3.png">
+                                    </div>
+                                    <div class="technology">
+                                        <h4>Senior Web Designer</h4>
+                                        <h5>Openlane</h5>
+                                        <ul>
+                                            <li>php</li>
+                                            <li>UX</li>
+                                            <li>UI</li>
+                                        </ul>
+                                    </div>
+                                    <div class="location">
+                                        <span><i class="fa fa-map-marker" aria-hidden="true"></i>UK, Canada</span>
+                                        <div class="count">4 application</div>
+                                    </div>
+                                    <div class="time">
+                                        <span>Full time</span>
+                                    </div>
+                                    <div class="post-time">
+                                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>1 Dayago</span>
+                                    </div>
+                                    <div class="views">
+                                        <span><i class="fa fa-eye" aria-hidden="true"></i>38 views</span>
+                                        <div class="option">
+                                            <a href="#" class="share"><i class="fa fa-share-alt"
+                                                                         aria-hidden="true"></i>Share</a>
+                                            <a href="#" class="expand"><i class="fa fa-angle-double-down"
+                                                                          aria-hidden="true"></i>
+                                                Expand</a>
+                                            <span class="save">Save</span>
+                                        </div>
+                                    </div>
+                                    <div class="watch">
+                                        <button class="view-button btn">View</button>
+                
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-logo">
+                                        <img src="img/item1.png">
+                                    </div>
+                                    <div class="technology">
+                                        <h4>Senior Web Designer</h4>
+                                        <h5>Openlane</h5>
+                                        <ul>
+                                            <li>php</li>
+                                            <li>UX</li>
+                                            <li>UI</li>
+                                        </ul>
+                                    </div>
+                                    <div class="location">
+                                        <span><i class="fa fa-map-marker" aria-hidden="true"></i>UK, Canada</span>
+                                        <div class="count">4 application</div>
+                                    </div>
+                                    <div class="time">
+                                        <span>Full time</span>
+                                    </div>
+                                    <div class="post-time">
+                                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>1 Dayago</span>
+                                    </div>
+                                    <div class="views">
+                                        <span><i class="fa fa-eye" aria-hidden="true"></i>38 views</span>
+                                        <div class="option">
+                                            <a href="#" class="share"><i class="fa fa-share-alt"
+                                                                         aria-hidden="true"></i>Share</a>
+                                            <a href="#" class="expand"><i class="fa fa-angle-double-down"
+                                                                          aria-hidden="true"></i>
+                                                Expand</a>
+                                            <span class="save">Save</span>
+                                        </div>
+                                    </div>
+                
+                                    <div class="watch">
+                                        <button class="view-button btn">View</button>
+                
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-logo">
+                                        <img src="img/item3.png">
+                                    </div>
+                                    <div class="technology">
+                                        <h4>Senior Web Designer</h4>
+                                        <h5>Openlane</h5>
+                                        <ul>
+                                            <li>php</li>
+                                            <li>UX</li>
+                                            <li>UI</li>
+                                        </ul>
+                                    </div>
+                                    <div class="location">
+                                        <span><i class="fa fa-map-marker" aria-hidden="true"></i>UK, Canada</span>
+                                        <div class="count">4 application</div>
+                                    </div>
+                                    <div class="time">
+                                        <span>Full time</span>
+                                    </div>
+                                    <div class="post-time">
+                                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>1 Dayago</span>
+                                    </div>
+                                    <div class="views">
+                                        <span><i class="fa fa-eye" aria-hidden="true"></i>38 views</span>
+                                        <div class="option">
+                                            <a href="#" class="share"><i class="fa fa-share-alt"
+                                                                         aria-hidden="true"></i>Share</a>
+                                            <a href="#" class="expand"><i class="fa fa-angle-double-down"
+                                                                          aria-hidden="true"></i>
+                                                Expand</a>
+                                            <span class="save">Save</span>
+                                        </div>
+                                    </div>
+                                    <div class="watch">
+                                        <button class="view-button btn">View</button>
+                
+                                    </div>
+                                </div>
+        
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="watch">
-                        <button class="view-button btn">View</button>
-
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="item-logo">
-                        <img src="img/item2.png">
-                    </div>
-                    <div class="technology">
-                        <h4>Senior Web Designer</h4>
-                        <h5>Openlane</h5>
-                        <ul>
-                            <li>php</li>
-                            <li>UX</li>
-                            <li>UI</li>
-                        </ul>
-                    </div>
-                    <div class="location">
-                        <span><i class="fa fa-map-marker" aria-hidden="true"></i>UK, Canada</span>
-                        <div class="count">4 application</div>
-                    </div>
-                    <div class="time">
-                        <span>Full time</span>
-                    </div>
-                    <div class="post-time">
-                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>1 Dayago</span>
-                    </div>
-                    <div class="views">
-                        <span><i class="fa fa-eye" aria-hidden="true"></i>38 views</span>
-                        <div class="option">
-                            <a href="#" class="share"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
-                            <a href="#" class="expand"><i class="fa fa-angle-double-down" aria-hidden="true"></i> Expand</a>
-                            <span class="save">Save</span>
-                        </div>
-                    </div>
-
-                    <div class="watch">
-                        <button class="view-button btn">View</button>
-
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="item-logo">
-                        <img src="img/item3.png">
-                    </div>
-                    <div class="technology">
-                        <h4>Senior Web Designer</h4>
-                        <h5>Openlane</h5>
-                        <ul>
-                            <li>php</li>
-                            <li>UX</li>
-                            <li>UI</li>
-                        </ul>
-                    </div>
-                    <div class="location">
-                        <span><i class="fa fa-map-marker" aria-hidden="true"></i>UK, Canada</span>
-                        <div class="count">4 application</div>
-                    </div>
-                    <div class="time">
-                        <span>Full time</span>
-                    </div>
-                    <div class="post-time">
-                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>1 Dayago</span>
-                    </div>
-                    <div class="views">
-                        <span><i class="fa fa-eye" aria-hidden="true"></i>38 views</span>
-                        <div class="option">
-                            <a href="#" class="share"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
-                            <a href="#" class="expand"><i class="fa fa-angle-double-down" aria-hidden="true"></i> Expand</a>
-                            <span class="save add_save">Save</span>
-                        </div>
-                    </div>
-
-                    <div class="watch">
-                        <button class="view-button btn">View</button>
-
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="item-logo">
-                        <img src="img/item4.png">
-                    </div>
-                    <div class="technology">
-                        <h4>Senior Web Designer</h4>
-                        <h5>Openlane</h5>
-                        <ul>
-                            <li>php</li>
-                            <li>UX</li>
-                            <li>UI</li>
-                        </ul>
-                    </div>
-                    <div class="location">
-                        <span><i class="fa fa-map-marker" aria-hidden="true"></i>UK, Canada</span>
-                        <div class="count">4 application</div>
-                    </div>
-                    <div class="time">
-                        <span>Full time</span>
-                    </div>
-                    <div class="post-time">
-                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>1 Dayago</span>
-                    </div>
-                    <div class="views">
-                        <span><i class="fa fa-eye" aria-hidden="true"></i>38 views</span>
-                        <div class="option">
-                            <a href="#" class="share"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
-                            <a href="#" class="expand"><i class="fa fa-angle-double-down" aria-hidden="true"></i> Expand</a>
-                            <span class="save">Save</span>
-                        </div>
-                    </div>
-
-                    <div class="watch">
-                        <button class="view-button btn">View</button>
-
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="item-logo">
-                        <img src="img/item5.png">
-                    </div>
-                    <div class="technology">
-                        <h4>Senior Web Designer</h4>
-                        <h5>Openlane</h5>
-                        <ul>
-                            <li>php</li>
-                            <li>UX</li>
-                            <li>UI</li>
-                        </ul>
-                    </div>
-                    <div class="location">
-                        <span><i class="fa fa-map-marker" aria-hidden="true"></i>UK, Canada</span>
-                        <div class="count">4 application</div>
-                    </div>
-                    <div class="time">
-                        <span>Full time</span>
-                    </div>
-                    <div class="post-time">
-                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>1 Dayago</span>
-                    </div>
-                    <div class="views">
-                        <span><i class="fa fa-eye" aria-hidden="true"></i>38 views</span>
-                        <div class="option">
-                            <a href="#" class="share"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
-                            <a href="#" class="expand"><i class="fa fa-angle-double-down" aria-hidden="true"></i> Expand</a>
-                            <span class="save">Save</span>
-                        </div>
-                    </div>
-
-                    <div class="watch">
-                        <button class="view-button btn">View</button>
-
-                    </div>
-                </div>
-
-
-            </div>
-            <button class="more btn">See More</button>
-        </div>
-        <div class="step-bg" style="background: url('img/bg2.png') ">
-            <div class="wrapper clearfix" style="background-image: url('img/banner_all_compl.svg')">
-                <h3>FIND A JOBE YOU LOVE</h3>
-                <div class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                </div>
-                <div class="step">
-                    <div class="col-lg-4">
-
-                        <img src="img/icon1.svg">
-                        <h4>FIRST STEP</h4>
-                        <p>Register with us</p>
-
-                    </div>
-                    <div class="col-lg-4">
-
-                        <img src="img/icon2.svg">
-                        <h4>SECOND STEP</h4>
-                        <p>Upload your resume</p>
-
-                    </div>
-                    <div class="col-lg-4">
-
-                        <img src="img/icon3.svg">
-                        <h4>THIRD STEP</h4>
-                        <p>Search and Apply</p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="wrapper featured clearfix">
-            <h3>SEARCH YOUR FEATURED JOB</h3>
-            <div class="sub-title">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
-            </div>
-            <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#menu">Jobs By Company</a></li>
-                <li><a data-toggle="tab" href="#menu1">Jobs By Location</a></li>
-                <li><a data-toggle="tab" href="#menu2">Jobs By Niche</a></li>
-                <li><a data-toggle="tab" href="#menu3">Jobs By Industry</a></li>
-            </ul>
-
-            <div class="tab-content">
-                <a data-toggle="tab" class="active tabs" href="#menu">Jobs By Company</a>
-
-                <div id="menu" class="tab-pane fade in active">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <ul>
-                            <li>Yearin</li>
-                            <li>Goodsilron</li>
-                            <li>Condax</li>
-                            <li>Opentech</li>
-                            <li>Golddex</li>
-                            <li>Year-job</li>
-                            <li>Isdom</li>
-                            <li>Xx-zobam</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <ul>
-                            <li>Yearin</li>
-                            <li>Goodsilron</li>
-                            <li>Condax</li>
-                            <li>Opentech</li>
-                            <li>Golddex</li>
-                            <li>Year-job</li>
-                            <li>Isdom</li>
-                            <li>Xx-zobam</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <ul>
-                            <li>Yearin</li>
-                            <li>Goodsilron</li>
-                            <li>Condax</li>
-                            <li>Opentech</li>
-                            <li>Golddex</li>
-                            <li>Year-job</li>
-                            <li>Isdom</li>
-                            <li>Xx-zobam</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <ul>
-                            <li>Yearin</li>
-                            <li>Goodsilron</li>
-                            <li>Condax</li>
-                            <li>Opentech</li>
-                            <li>Golddex</li>
-                            <li>Year-job</li>
-                            <li>Isdom</li>
-                            <li>Xx-zobam</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <a data-toggle="tab" class="tabs" href="#menu1">Jobs By Location</a>
-
-                <div id="menu1" class="tab-pane fade">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <ul>
-                            <li>Yearin</li>
-                            <li>Goodsilron</li>
-                            <li>Condax</li>
-                            <li>Opentech</li>
-                            <li>Golddex</li>
-                            <li>Year-job</li>
-                            <li>Isdom</li>
-                            <li>Xx-zobam</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <ul>
-                            <li>Yearin</li>
-                            <li>Goodsilron</li>
-                            <li>Condax</li>
-                            <li>Opentech</li>
-                            <li>Golddex</li>
-                            <li>Year-job</li>
-                            <li>Isdom</li>
-                            <li>Xx-zobam</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <ul>
-                            <li>Yearin</li>
-                            <li>Goodsilron</li>
-                            <li>Condax</li>
-                            <li>Opentech</li>
-                            <li>Golddex</li>
-                            <li>Year-job</li>
-                            <li>Isdom</li>
-                            <li>Xx-zobam</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <ul>
-                            <li>Yearin</li>
-                            <li>Goodsilron</li>
-                            <li>Condax</li>
-                            <li>Opentech</li>
-                            <li>Golddex</li>
-                            <li>Year-job</li>
-                            <li>Isdom</li>
-                            <li>Xx-zobam</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <a data-toggle="tab" class="tabs" href="#menu2">Jobs By Niche</a>
-
-                <div id="menu2" class="tab-pane fade">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <ul>
-                            <li>Yearin</li>
-                            <li>Goodsilron</li>
-                            <li>Condax</li>
-                            <li>Opentech</li>
-                            <li>Golddex</li>
-                            <li>Year-job</li>
-                            <li>Isdom</li>
-                            <li>Xx-zobam</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <ul>
-                            <li>Yearin</li>
-                            <li>Goodsilron</li>
-                            <li>Condax</li>
-                            <li>Opentech</li>
-                            <li>Golddex</li>
-                            <li>Year-job</li>
-                            <li>Isdom</li>
-                            <li>Xx-zobam</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <ul>
-                            <li>Yearin</li>
-                            <li>Goodsilron</li>
-                            <li>Condax</li>
-                            <li>Opentech</li>
-                            <li>Golddex</li>
-                            <li>Year-job</li>
-                            <li>Isdom</li>
-                            <li>Xx-zobam</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <ul>
-                            <li>Yearin</li>
-                            <li>Goodsilron</li>
-                            <li>Condax</li>
-                            <li>Opentech</li>
-                            <li>Golddex</li>
-                            <li>Year-job</li>
-                            <li>Isdom</li>
-                            <li>Xx-zobam</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <a data-toggle="tab" class="tabs" href="#menu3">Jobs By Industry</a>
-
-                <div id="menu3" class="tab-pane fade">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <ul>
-                            <li>Yearin</li>
-                            <li>Goodsilron</li>
-                            <li>Condax</li>
-                            <li>Opentech</li>
-                            <li>Golddex</li>
-                            <li>Year-job</li>
-                            <li>Isdom</li>
-                            <li>Xx-zobam</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <ul>
-                            <li>Yearin</li>
-                            <li>Goodsilron</li>
-                            <li>Condax</li>
-                            <li>Opentech</li>
-                            <li>Golddex</li>
-                            <li>Year-job</li>
-                            <li>Isdom</li>
-                            <li>Xx-zobam</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <ul>
-                            <li>Yearin</li>
-                            <li>Goodsilron</li>
-                            <li>Condax</li>
-                            <li>Opentech</li>
-                            <li>Golddex</li>
-                            <li>Year-job</li>
-                            <li>Isdom</li>
-                            <li>Xx-zobam</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <ul>
-                            <li>Yearin</li>
-                            <li>Goodsilron</li>
-                            <li>Condax</li>
-                            <li>Opentech</li>
-                            <li>Golddex</li>
-                            <li>Year-job</li>
-                            <li>Isdom</li>
-                            <li>Xx-zobam</li>
-                        </ul>
                     </div>
                 </div>
             </div>
-
-        </div>
-        <div class="wrapper">
-            <h3>RECOMMENDED JOBS</h3>
-            <div class="sub-title">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
-            </div>
-            <div class="item-grid">
-                <div class="item">
-                    <div class="item-logo">
-                        <img src="img/item1.png">
-                    </div>
-                    <div class="technology">
-                        <h4>Senior Web Designer</h4>
-                        <h5>Openlane</h5>
-                        <ul>
-                            <li>php</li>
-                            <li>UX</li>
-                            <li>UI</li>
-                        </ul>
-                    </div>
-                    <div class="location">
-                        <span><i class="fa fa-map-marker" aria-hidden="true"></i>UK, Canada</span>
-                        <div class="count">4 application</div>
-                    </div>
-                    <div class="time">
-                        <span>Full time</span>
-                    </div>
-                    <div class="post-time">
-                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>1 Dayago</span>
-                    </div>
-                    <div class="views">
-                        <span><i class="fa fa-eye" aria-hidden="true"></i>38 views</span>
-                        <div class="option">
-                            <a href="#" class="share"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
-                            <a href="#" class="expand"><i class="fa fa-angle-double-down" aria-hidden="true"></i> Expand</a>
-                            <span class="save">Save</span>
-                        </div>
-                    </div>
-
-                    <div class="watch">
-                        <button class="view-button btn">View</button>
-
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="item-logo">
-                        <img src="img/item2.png">
-                    </div>
-                    <div class="technology">
-                        <h4>Senior Web Designer</h4>
-                        <h5>Openlane</h5>
-                        <ul>
-                            <li>php</li>
-                            <li>UX</li>
-                            <li>UI</li>
-                        </ul>
-                    </div>
-                    <div class="location">
-                        <span><i class="fa fa-map-marker" aria-hidden="true"></i>UK, Canada</span>
-                        <div class="count">4 application</div>
-                    </div>
-                    <div class="time">
-                        <span>Full time</span>
-                    </div>
-                    <div class="post-time">
-                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>1 Dayago</span>
-                    </div>
-                    <div class="views">
-                        <span><i class="fa fa-eye" aria-hidden="true"></i>38 views</span>
-                        <div class="option">
-                            <a href="#" class="share"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
-                            <a href="#" class="expand"><i class="fa fa-angle-double-down" aria-hidden="true"></i> Expand</a>
-                            <span class="save">Save</span>
-                        </div>
-                    </div>
-
-                    <div class="watch">
-                        <button class="view-button btn">View</button>
-
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="item-logo">
-                        <img src="img/item3.png">
-                    </div>
-                    <div class="technology">
-                        <h4>Senior Web Designer</h4>
-                        <h5>Openlane</h5>
-                        <ul>
-                            <li>php</li>
-                            <li>UX</li>
-                            <li>UI</li>
-                        </ul>
-                    </div>
-                    <div class="location">
-                        <span><i class="fa fa-map-marker" aria-hidden="true"></i>UK, Canada</span>
-                        <div class="count">4 application</div>
-                    </div>
-                    <div class="time">
-                        <span>Full time</span>
-                    </div>
-                    <div class="post-time">
-                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>1 Dayago</span>
-                    </div>
-                    <div class="views">
-                        <span><i class="fa fa-eye" aria-hidden="true"></i>38 views</span>
-                        <div class="option">
-                            <a href="#" class="share"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
-                            <a href="#" class="expand"><i class="fa fa-angle-double-down" aria-hidden="true"></i> Expand</a>
-                            <span class="save">Save</span>
-                        </div>
-                    </div>
-
-                    <div class="watch">
-                        <button class="view-button btn">View</button>
-
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="item-logo">
-                        <img src="img/item4.png">
-                    </div>
-                    <div class="technology">
-                        <h4>Senior Web Designer</h4>
-                        <h5>Openlane</h5>
-                        <ul>
-                            <li>php</li>
-                            <li>UX</li>
-                            <li>UI</li>
-                        </ul>
-                    </div>
-                    <div class="location">
-                        <span><i class="fa fa-map-marker" aria-hidden="true"></i>UK, Canada</span>
-                        <div class="count">4 application</div>
-                    </div>
-                    <div class="time">
-                        <span>Full time</span>
-                    </div>
-                    <div class="post-time">
-                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>1 Dayago</span>
-                    </div>
-                    <div class="views">
-                        <span><i class="fa fa-eye" aria-hidden="true"></i>38 views</span>
-                        <div class="option">
-                            <a href="#" class="share"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
-                            <a href="#" class="expand"><i class="fa fa-angle-double-down" aria-hidden="true"></i> Expand</a>
-                            <span class="save">Save</span>
-                        </div>
-                    </div>
-
-                    <div class="watch">
-                        <button class="view-button btn">View</button>
-
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="item-logo">
-                        <img src="img/item5.png">
-                    </div>
-                    <div class="technology">
-                        <h4>Senior Web Designer</h4>
-                        <h5>Openlane</h5>
-                        <ul>
-                            <li>php</li>
-                            <li>UX</li>
-                            <li>UI</li>
-                        </ul>
-                    </div>
-                    <div class="location">
-                        <span><i class="fa fa-map-marker" aria-hidden="true"></i>UK, Canada</span>
-                        <div class="count">4 application</div>
-                    </div>
-                    <div class="time">
-                        <span>Full time</span>
-                    </div>
-                    <div class="post-time">
-                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>1 Dayago</span>
-                    </div>
-                    <div class="views">
-                        <span><i class="fa fa-eye" aria-hidden="true"></i>38 views</span>
-                        <div class="option">
-                            <a href="#" class="share"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
-                            <a href="#" class="expand"><i class="fa fa-angle-double-down" aria-hidden="true"></i> Expand</a>
-                            <span class="save add_save">Save</span>
-                        </div>
-                    </div>
-
-                    <div class="watch">
-                        <button class="view-button btn">View</button>
-
-                    </div>
-                </div>
-
-            </div>
-            <button class="more btn">See More</button>
         </div>
     </div>
     <div class="pre-footer">
-
-        <div class="col-md-6 look">
-            I'm ready to <strong>LOOK FOR A JOB</strong><i class="fa fa-angle-double-right"
-                                                           aria-hidden="true"></i>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>Send me jobs like this</h4>
+                    <p>Enter your email address and we'll let you know as soon as we have new jobs like this.</p>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-9">
+                    <input type="email" name="subscribe" placeholder="Your Email Address" class="form-control subscribe">
+                </div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn subscribe-btn">Notify Me</button>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 post">
-            Need to <strong>POST A JOB?</strong><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-        </div>
-
+       
     </div>
 </main>
 <footer>
-
+    
     <div class="wrapper">
         <div class="footer-info">
             <div class="container-fluid">
@@ -816,8 +501,10 @@
 <script src="js/masonry.pkgd.min.js"></script>
 <script src="js/jquery.barrating.min.js"></script>
 <script src="js/fileinput.min.js"></script>
-<!--<script src="https://maps.googleapis.com/maps/api/js?v=3&amp;key=AIzaSyCrYC5afF1R5i6rixU7mjOEGKSa82rxCB4"></script>-->
+<script src="https://maps.googleapis.com/maps/api/js?v=3&amp;key=AIzaSyCrYC5afF1R5i6rixU7mjOEGKSa82rxCB4"></script>
 <script src="js/map.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="js/transition.js"></script>
 <script src="js/main.js"></script>
 </html>
 
