@@ -18,16 +18,19 @@ $(window).bind('load resize orientationChange', function () {
 /* Admin Search page -> filter pill */
 
 
-$(document).on('click', '.filter.admin .filter-row > .close', function() {
+$(document).on('click', '.filter.admin .filter-row > .close', function(e) {
+	e.preventDefault();
 	$(this).parent().remove();
 });
 
-$('.filter.admin .stop-btn').on('click', function () {
-	$.each($('.filter.admin .filter-rows .filter-row:not(.hidden)'), function (e) {
+$('.filter.admin .stop-btn').on('click', function (e) {
+	e.preventDefault();
+	$.each($('.filter.admin .filter-rows .filter-row:not(.hidden)'), function () {
         $(this).remove();
 	});
 });
-$('.filter.admin .add-btn').on('click', function () {
+$('.filter.admin .add-btn').on('click', function (e) {
+    e.preventDefault();
 	var $add_row = $('.filter.admin').find('.filter-rows .filter-row.hidden').clone().removeClass('hidden');
 	$('.filter-rows').append($add_row);
 	
