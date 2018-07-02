@@ -74,14 +74,19 @@ body::-webkit-scrollbar-thumb {
     .add-btn {
       margin-right: auto; } }
 
-.stop-btn:hover, .stop-btn:active, .stop-btn:focus,
-.add-btn:hover,
-.add-btn:active,
-.add-btn:focus {
-  color: #4CACD1;
-  background: transparent;
-  border: 1px solid #4CACD1;
-  outline: none; }
+.stop-btn,
+.add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .stop-btn:hover, .stop-btn:active, .stop-btn:focus,
+  .add-btn:hover,
+  .add-btn:active,
+  .add-btn:focus {
+    color: #4CACD1;
+    background: transparent;
+    border: 1px solid #4CACD1;
+    outline: none; }
 
 .btn-card,
 .btn-view {
