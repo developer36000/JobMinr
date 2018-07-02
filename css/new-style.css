@@ -1,4 +1,4 @@
-body {
+body, html {
   overflow-x: hidden; }
 
 body::-webkit-scrollbar-track {
@@ -20,6 +20,10 @@ body::-webkit-scrollbar-thumb {
   @media screen and (max-width: 768px) {
     .search-page.admin .add-btn-wrap {
       justify-content: center; } }
+@media screen and (max-width: 640px) {
+  .search-page.admin .btn-group {
+    flex-direction: column;
+    align-items: center; } }
 
 .navigation-sidebar .select2-container {
   width: 100% !important; }
@@ -70,6 +74,15 @@ body::-webkit-scrollbar-thumb {
     .add-btn {
       margin-right: auto; } }
 
+.stop-btn:hover, .stop-btn:active, .stop-btn:focus,
+.add-btn:hover,
+.add-btn:active,
+.add-btn:focus {
+  color: #4CACD1;
+  background: transparent;
+  border: 1px solid #4CACD1;
+  outline: none; }
+
 .btn-card,
 .btn-view {
   font-family: Roboto, Regular, sans-serif;
@@ -96,12 +109,17 @@ body::-webkit-scrollbar-thumb {
   font-size: 18px;
   font-weight: 400;
   border: 1px solid;
-  transition: all .3s; }
+  transition: all .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
   .btn-soc-login:last-child {
     margin-bottom: 0; }
   .btn-soc-login b, .btn-soc-login strong {
     font-family: Roboto, Regular, sans-serif;
     font-weight: 600; }
+  .btn-soc-login .fa, .btn-soc-login .fas {
+    padding-right: 10px; }
   .btn-soc-login:hover {
     background: transparent; }
 
@@ -153,6 +171,18 @@ body::-webkit-scrollbar-thumb {
   .filter-row .ui.multiple.search.dropdown {
     border: 1px solid #4CACD1; }
 
+.filter-row {
+  position: relative; }
+  .filter-row .close {
+    position: absolute;
+    right: 15px;
+    top: 31%;
+    color: #303E4B;
+    opacity: .7;
+    transition: all .3s; }
+    .filter-row .close:hover {
+      opacity: 1; }
+
 .login-page {
   background: #FBFBFB; }
   .login-page main {
@@ -165,6 +195,34 @@ body::-webkit-scrollbar-thumb {
   .login-page footer {
     background: #F6FDFF; }
 
+.bottmo-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row; }
+  @media screen and (max-width: 480px) {
+    .bottmo-form {
+      flex-direction: column;
+      margin-top: 20px; } }
+
+.forgot-link {
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: .5px;
+  color: #303E4B;
+  opacity: .5;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-weight: 400;
+  text-decoration: underline;
+  transition: all .3s; }
+  @media screen and (max-width: 480px) {
+    .forgot-link {
+      margin-bottom: 10px;
+      margin-top: 10px;
+      display: inline-block; } }
+  .forgot-link:hover {
+    opacity: 1; }
+
 .form-container {
   border-radius: 10px;
   overflow: hidden;
@@ -176,11 +234,17 @@ body::-webkit-scrollbar-thumb {
     letter-spacing: 1px;
     line-height: 50px;
     margin-bottom: 15px; }
+    @media screen and (max-width: 640px) {
+      .form-container .form-title {
+        text-align: center; } }
   .form-container .form-sub-title {
     font-family: "Montserrat-Regular", sans-serif;
     font-size: 22px;
     line-height: 29px;
     margin-top: 0; }
+    @media screen and (max-width: 640px) {
+      .form-container .form-sub-title {
+        text-align: center; } }
     .form-container .form-sub-title a {
       font-family: "Montserrat-Regular", sans-serif;
       font-size: inherit;
@@ -353,6 +417,9 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start; }
+  @media screen and (max-width: 1199px) {
+    .card-box {
+      align-items: center; } }
   .card-box h2, .card-box h3, .card-box h4, .card-box h5, .card-box h6 {
     font-family: "Montserrat-SemiBold", sans-serif;
     color: #303E4B;
@@ -623,5 +690,46 @@ ul.skills {
     .job-body .job-description h2, .job-body .job-description h3, .job-body .job-description h4, .job-body .job-description h5, .job-body .job-description h6 {
       margin-bottom: 5px;
       font-weight: 600; }
+
+@media screen and (max-width: 1199px) {
+  .footer-info .about p {
+    margin: 0 auto; } }
+
+.company-page main,
+.login-page main {
+  padding-top: 120px;
+  padding-bottom: 40px; }
+@media (max-width: 768px) {
+  .company-page .wrapper,
+  .login-page .wrapper {
+    max-width: 100%; }
+  .company-page .container,
+  .login-page .container {
+    width: 100% !important; } }
+@media (min-width: 768px) {
+  .company-page .container,
+  .login-page .container {
+    width: 750px !important; } }
+@media (min-width: 992px) {
+  .company-page .wrapper,
+  .login-page .wrapper {
+    max-width: 970px; }
+  .company-page .container,
+  .login-page .container {
+    width: 970px !important; } }
+@media (min-width: 1200px) {
+  .company-page .wrapper,
+  .login-page .wrapper {
+    max-width: 1170px; }
+  .company-page .container,
+  .login-page .container {
+    width: 1170px !important; } }
+@media (min-width: 1235px) {
+  .company-page .wrapper,
+  .login-page .wrapper {
+    max-width: 1235px; }
+  .company-page .container,
+  .login-page .container {
+    width: 1235px !important; } }
 
 /*# sourceMappingURL=new-style.css.map */

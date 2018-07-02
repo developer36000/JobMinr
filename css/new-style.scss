@@ -15,7 +15,7 @@ $fb: #4B60B2; // facebook
 $ln: #0070B3; //linkedin
 $gl: #DF4930; // google
 
-body{
+body, html{
 	overflow-x: hidden;
 }
 body::-webkit-scrollbar-track {
@@ -42,6 +42,12 @@ body::-webkit-scrollbar-thumb {
 		justify-content: flex-end;
 		@media screen and (max-width: 768px) {
 			justify-content: center;
+		}
+	}
+	.btn-group {
+		@media screen and (max-width: 640px) {
+			flex-direction: column;
+			align-items: center;
 		}
 	}
 }
@@ -101,6 +107,17 @@ body::-webkit-scrollbar-thumb {
 		margin-right: auto;
 	}
 }
+.stop-btn,
+.add-btn {
+	&:hover,
+	&:active,
+	&:focus {
+		color: $blue;
+		background: transparent;
+		border: 1px solid $blue;
+		outline: none;
+	}
+}
 .btn-card,
 .btn-view {
 	font-family: $roboto;
@@ -128,12 +145,18 @@ body::-webkit-scrollbar-thumb {
 	font-weight: 400;
 	border: 1px solid;
 	transition: all .3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	&:last-child {
 		margin-bottom: 0;
 	}
 	b, strong {
 		font-family: $roboto;
 		font-weight: 600;
+	}
+	.fa, .fas {
+		padding-right: 10px;
 	}
 	&:hover {
 		background: transparent;
@@ -197,6 +220,20 @@ body::-webkit-scrollbar-thumb {
 		border: 1px solid $blue;
 	}
 }
+.filter-row {
+	position: relative;
+	.close {
+		position: absolute;
+		right: 15px;
+		top: 31%;
+		color: $dark;
+		opacity: .7;
+		transition: all .3s;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
 
 // Log In page
 .login-page {
@@ -215,6 +252,35 @@ body::-webkit-scrollbar-thumb {
 	}
 	
 }
+.bottmo-form {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+	@media screen and (max-width: 480px) {
+		flex-direction: column;
+		margin-top: 20px;
+	}
+}
+.forgot-link {
+	font-size: 16px;
+	line-height: 21px;
+	letter-spacing: .5px;
+	color: $dark;
+	opacity: .5;
+	font-family: $monts-reg;
+	font-weight: 400;
+	text-decoration: underline;
+	transition: all .3s;
+	@media screen and (max-width: 480px) {
+		margin-bottom: 10px;
+		margin-top: 10px;
+		display: inline-block;
+	}
+	&:hover {
+		opacity: 1;
+	}
+}
 .form-container {
 	border-radius: 10px;
 	overflow: hidden;
@@ -226,12 +292,18 @@ body::-webkit-scrollbar-thumb {
 		letter-spacing: 1px;
 		line-height: 50px;
 		margin-bottom: 15px;
+		@media screen and (max-width: 640px) {
+			text-align: center;
+		}
 	}
 	.form-sub-title {
 		font-family: $monts-reg;
 		font-size: 22px;
 		line-height: 29px;
 		margin-top: 0;
+		@media screen and (max-width: 640px) {
+			text-align: center;
+		}
 		a {
 			font-family: $monts-reg;
 			font-size: inherit;
@@ -400,6 +472,10 @@ body::-webkit-scrollbar-thumb {
 	footer {
 		background: #FFFFFF;
 	}
+	
+	
+
+	
 }
 .title-wrap {
 	background: $dark;
@@ -437,6 +513,9 @@ body::-webkit-scrollbar-thumb {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
+	@media screen and (max-width: 1199px) {
+		align-items: center;
+	}
 	h2, h3, h4, h5, h6 {
 		font-family: $monts-semi;
 		color: $dark;
@@ -496,6 +575,8 @@ body::-webkit-scrollbar-thumb {
 		}
 	}
 
+
+	
 }
 .card-title,
 .card-sub-title{
@@ -773,3 +854,57 @@ ul.skills {
 		}
 	}
 }
+.footer-info {
+	.about {
+		p {
+			@media screen and (max-width: 1199px) {
+				margin: 0 auto;
+			}
+		}
+	}
+}
+.company-page,
+.login-page {
+	main {
+		padding-top: 120px;
+		padding-bottom: 40px;
+	}
+	@media (max-width: 768px) {
+		.wrapper {
+			max-width: 100%;
+		}
+		.container {
+			width: 100% !important;
+		}
+	}
+	@media (min-width: 768px) {
+		.container {
+			width: 750px !important;
+		}
+	}
+	@media (min-width: 992px) {
+		.wrapper {
+			max-width: 970px;
+		}
+		.container {
+			width: 970px !important;
+		}
+	}
+	@media (min-width: 1200px) {
+		.wrapper {
+			max-width: 1170px;
+		}
+		.container {
+			width: 1170px !important;
+		}
+	}
+	@media (min-width: 1235px) {
+		.wrapper {
+			max-width: 1235px;
+		}
+		.container {
+			width: 1235px !important;
+		}
+	}
+}
+
