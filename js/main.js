@@ -15,6 +15,26 @@ $(window).bind('load resize orientationChange', function () {
 	
 });
 
+/* Admin Search page -> filter pill */
+
+
+$(document).on('click', '.filter.admin .filter-row > .close', function() {
+	$(this).parent().remove();
+});
+
+$('.filter.admin .stop-btn').on('click', function () {
+	$.each($('.filter.admin .filter-rows .filter-row:not(.hidden)'), function (e) {
+        $(this).remove();
+	});
+});
+$('.filter.admin .add-btn').on('click', function () {
+	var $add_row = $('.filter.admin').find('.filter-rows .filter-row.hidden').clone().removeClass('hidden');
+	$('.filter-rows').append($add_row);
+	
+});
+
+
+
 $.each($('.search-module .sel-wrap-default select'), function (index) {
     $(this).select2({
         minimumResultsForSearch: Infinity,
