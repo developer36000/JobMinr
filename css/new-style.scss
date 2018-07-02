@@ -476,9 +476,6 @@ body::-webkit-scrollbar-thumb {
 		background: #FFFFFF;
 	}
 	
-	
-
-	
 }
 .title-wrap {
 	background: $dark;
@@ -487,22 +484,38 @@ body::-webkit-scrollbar-thumb {
 	align-items: center;
 	justify-content: center;
 	padding: 15px;
-	background: url("../img/bg2.png") no-repeat 50% 50%;
+	background: url("../img/company-bg.png") no-repeat 50% 50%;
 	-webkit-background-size: cover;
 	background-size: cover;
 	min-height: 17.1vmin;
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.30);
 	margin-bottom: 20px;
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: $dark;
+		opacity: .6;
+		z-index: 1;
+	}
 	& * {
 		color: $white;
 		font-family: $monts-semi;
 		font-size: 38px;
 		letter-spacing: 1px;
 		line-height: 50px;
+		position: relative;
+		z-index: 2;
 	}
+	
 	a, span {
 		color: $blue;
 	}
+	
 }
 .cards-row {
 	margin-bottom: 20px;
