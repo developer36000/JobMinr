@@ -109,6 +109,9 @@ body::-webkit-scrollbar-thumb {
 }
 .stop-btn,
 .add-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	&:hover,
 	&:active,
 	&:focus {
