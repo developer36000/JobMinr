@@ -1051,6 +1051,7 @@ ul.skills {
 }
 .select-key{
   background: $blue-white;
+  padding: 1px;
 }
 #keyword-list{
   border-bottom: 1px solid transparent;
@@ -1156,9 +1157,15 @@ ul.skills {
 }
 .editKey{
   right:30px;
+  &:focus {
+    outline: none;
+  }
 }
 .removeKey{
   right:10px;
+  &:focus {
+    outline: none;
+  }
 }
 
 .send-all{

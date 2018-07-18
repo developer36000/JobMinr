@@ -830,7 +830,8 @@ ul.skills {
       font-size: 18px; }
 
 .select-key {
-  background: #a4d5e7; }
+  background: #a4d5e7;
+  padding: 1px; }
 
 #keyword-list {
   border-bottom: 1px solid transparent; }
@@ -914,9 +915,13 @@ ul.skills {
 
 .editKey {
   right: 30px; }
+  .editKey:focus {
+    outline: none; }
 
 .removeKey {
   right: 10px; }
+  .removeKey:focus {
+    outline: none; }
 
 .send-all button {
   width: 49%;

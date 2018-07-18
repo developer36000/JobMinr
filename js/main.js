@@ -297,7 +297,8 @@ $.getJSON('db.json', function (data) {
 
                 $(".tab-content").append('<div id="home' + t + '" class="tab-pane  fade in "><ul></ul></div>');
                 for (var m in jobKey) {
-                    $("#home" + t + ' ul').append('<li class="li-' + m + '">-' + jobKey[m].keyText + '<button class="editKey"><i class="fa fa-edit"></i></button><button class="removeKey" ><i class="fa fa-times"></i></button></li>');
+                    $("#home" + t + ' ul').append('<li class="li-' + m + '">-<span>' + jobKey[m].keyText + '</span><button' +
+                        ' class="editKey"><i class="fa fa-edit"></i></button><button class="removeKey" ><i class="fa fa-times"></i></button></li>');
                     var instance = new Mark(document.querySelector("div.job-description"));
                     instance.mark(jobKey[m].keyText, {
                         "element": "span",
@@ -373,7 +374,7 @@ $.getJSON('db.json', function (data) {
                 }
             }
         });
-
+	   
         $.each(a, function () {
             if (this.value == '') {
                 console.log("Pleas entry value");
@@ -396,7 +397,7 @@ $.getJSON('db.json', function (data) {
                 }
                 addKeyTabContent();
             }
-            console.log(job);
+          //  console.log(job);
         });
     }
 
@@ -420,30 +421,58 @@ $.getJSON('db.json', function (data) {
             });
         });
     }
-
+    
+    function removeFromKey(btn) {
+	    var _this = btn,
+            _parent = _this.parent(),
+            keyword = _parent.find('span').text(),
+		    johnRemoved = [];
+	    for (var i = 0; i < job.length; i++) {
+		    if (job[i].jobCheck == true) {
+			    var key = job[i].kaywords;
+			    for (var j = 0; j < key.length; j++) {
+				    if (key[j].keyText == keyword) {
+                        //console.log('remove --> '+ keyword);
+					    key.splice(j);
+					    _parent.remove();
+					    //console.log(key);
+				    }
+			    }
+		    }
+	    }
+    }
+    
+    /*------------------------------------------------------*/
+    
     /* create  new niche*/
     $(".push-value").click(function () {
         addToJson();
+        $(this).prev('#name').val(''); // input#name
+	    console.log('job array');
         console.log(job);
+        
     });
 
     document.getElementById('description').addEventListener("mouseup", function () {
-
         var slection = getSelectionHtml();
         if (slection == '') {
-
         } else {
             $('#key').val(slection);
             addToKay();
             $('#key').val('');
         }
-
     });
     $(".push-key").click(function () {
         addToKay();
-
+	    $(this).prev('#key').val(''); // input#key
     });
-
+    
+    //remove keywords
+	
+	$(document).on('click', '.removeKey', function (e) {
+	    var _this = $(this);
+		removeFromKey(_this);
+	});
 
 });
 
