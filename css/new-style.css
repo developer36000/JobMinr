@@ -913,10 +913,25 @@ ul.skills {
     .tab-content li button:hover {
       color: #4CACD1; }
 
-.editKey {
+.editKey,
+.saveKey {
   right: 30px; }
-  .editKey:focus {
+  .editKey:focus,
+  .saveKey:focus {
     outline: none; }
+
+.key-input {
+  padding: 0 5px;
+  border: none;
+  border-bottom: 1px solid #4CACD1;
+  font-family: Roboto, Regular, sans-serif; }
+  .key-input:focus {
+    outline: none;
+    border-bottom: 2px solid #4CACD1; }
+
+.saveKey {
+  display: none;
+  right: 32px; }
 
 .removeKey {
   right: 10px; }

@@ -297,8 +297,8 @@ $.getJSON('db.json', function (data) {
 
                 $(".tab-content").append('<div id="home' + t + '" class="tab-pane  fade in "><ul></ul></div>');
                 for (var m in jobKey) {
-                    $("#home" + t + ' ul').append('<li class="li-' + m + '">-<span>' + jobKey[m].keyText + '</span><button' +
-                        ' class="editKey"><i class="fa fa-edit"></i></button><button class="removeKey" ><i class="fa fa-times"></i></button></li>');
+                    $("#home" + t + ' ul').append('<li class="li-' + m + '">- <span>' + jobKey[m].keyText + '</span><button class="editKey"><i class="fa fa-edit"></i></button><button class="saveKey"><i class="fa fa-floppy-o" aria-hidden="true"></i></button><button class="removeKey" ><i' +
+                        ' class="fa fa-times"></i></button></li>');
                     var instance = new Mark(document.querySelector("div.job-description"));
                     instance.mark(jobKey[m].keyText, {
                         "element": "span",
@@ -424,9 +424,8 @@ $.getJSON('db.json', function (data) {
     
     function removeFromKey(btn) {
 	    var _this = btn,
-            parents = _this.parents('.keyw'),
-            active_niche = parents.find('#keyword-list li.active a').text(),
-            _parent = _this.parent('li'),
+		    _parent = _this.parent('li'),
+            active_niche = _this.parents('.keyw').find('#keyword-list li.active a').text(),
             keyword = _parent.find('span').text();
 	    for (var i = 0; i < job.length; i++) {
 		    if ( job[i].jobCheck == true && job[i].jobNiche == active_niche ) {
@@ -441,6 +440,50 @@ $.getJSON('db.json', function (data) {
 		    }
 	    }
     }
+    function editKey(btn) {
+	    var _this = btn,
+		    _parent = _this.parent('li'),
+		    active_niche = _this.parents('.keyw').find('#keyword-list li.active a').text(),
+		    keyword = _parent.find('span').text();
+	    for (var i = 0; i < job.length; i++) {
+		    if ( job[i].jobCheck == true && job[i].jobNiche == active_niche ) {
+			    var key = job[i].kaywords;
+			    for (var j = 0; j < key.length; j++) {
+				    if (key[j].keyText == keyword) {
+					    //key.splice(j);
+					    _this.fadeOut();
+					    _parent.find('.saveKey').fadeIn();
+					    _parent.find('span').hide();
+					    _parent.append('<input type="text" class="key-input" value="'+ keyword +'">').fadeIn();
+					    console.log(key);
+				    }
+			    }
+		    }
+	    }
+    }
+	
+	function saveKey(btn) {
+		var _this = btn,
+			_parent = _this.parent('li'),
+			active_niche = _this.parents('.keyw').find('#keyword-list li.active a').text(),
+			keyword = _parent.find('span').text(),
+            input = _parent.find('.key-input');
+		for (var i = 0; i < job.length; i++) {
+			if ( job[i].jobCheck == true && job[i].jobNiche == active_niche ) {
+				var key = job[i].kaywords;
+				for (var j = 0; j < key.length; j++) {
+					if (key[j].keyText == keyword) {
+						_this.hide();
+						_parent.find('.editKey').show();
+						input.hide();
+						_parent.find('span').text(input.val()).fadeIn();
+						key[j].keyText = input.val();
+						console.log(key);
+					}
+				}
+			}
+		}
+	}
     
     /*------------------------------------------------------*/
     
@@ -471,6 +514,12 @@ $.getJSON('db.json', function (data) {
 	
 	$(document).on('click', '.removeKey', function (e) {
 		removeFromKey($(this));
+	});
+	$(document).on('click', '.editKey', function (e) {
+		editKey($(this));
+	});
+	$(document).on('click', '.saveKey', function (e) {
+		saveKey($(this));
 	});
 
 });

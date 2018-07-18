@@ -1155,11 +1155,26 @@ ul.skills {
   }
 
 }
-.editKey{
+.editKey,
+.saveKey {
   right:30px;
   &:focus {
     outline: none;
   }
+}
+.key-input {
+  padding: 0 5px;
+  border: none;
+  border-bottom: 1px solid $blue;
+  font-family: $roboto;
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid $blue;
+  }
+}
+.saveKey {
+  display: none;
+  right: 32px;
 }
 .removeKey{
   right:10px;
