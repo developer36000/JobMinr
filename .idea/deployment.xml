@@ -275,6 +275,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="sftp.raidboxes.de">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="softgroup-wp-test">
         <serverdata>
           <mappings>
@@ -283,6 +290,13 @@
         </serverdata>
       </paths>
       <paths name="suite59">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="suite59 prod">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
