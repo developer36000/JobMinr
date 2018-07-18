@@ -424,18 +424,18 @@ $.getJSON('db.json', function (data) {
     
     function removeFromKey(btn) {
 	    var _this = btn,
-            _parent = _this.parent(),
-            keyword = _parent.find('span').text(),
-		    johnRemoved = [];
+            parents = _this.parents('.keyw'),
+            active_niche = parents.find('#keyword-list li.active a').text(),
+            _parent = _this.parent('li'),
+            keyword = _parent.find('span').text();
 	    for (var i = 0; i < job.length; i++) {
-		    if (job[i].jobCheck == true) {
+		    if ( job[i].jobCheck == true && job[i].jobNiche == active_niche ) {
 			    var key = job[i].kaywords;
 			    for (var j = 0; j < key.length; j++) {
 				    if (key[j].keyText == keyword) {
-                        //console.log('remove --> '+ keyword);
 					    key.splice(j);
 					    _parent.remove();
-					    //console.log(key);
+					    console.log(key);
 				    }
 			    }
 		    }
@@ -470,8 +470,7 @@ $.getJSON('db.json', function (data) {
     //remove keywords
 	
 	$(document).on('click', '.removeKey', function (e) {
-	    var _this = $(this);
-		removeFromKey(_this);
+		removeFromKey($(this));
 	});
 
 });
