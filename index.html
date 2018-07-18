@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=EDGE"/>
     <title></title>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-select.css"/>
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css"/>
     <link rel="stylesheet" href="css/balloon.css"/>
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/font-awesome.css"/>
     <link rel="stylesheet" href="css/new-style.css"/>
+
 </head>
 <body class="job-page admin">
 <header>
@@ -44,10 +46,10 @@
                                 <a href="" class="rec-btn">Recruiting?</a>
                             </div>
                         </div>
-                    
+
                     </nav>
                 </div>
-            
+
             </div>
         </div>
     </div>
@@ -62,193 +64,150 @@
                     <h3 class="sidebar-title">Admin Panel</h3>
                     <h4 class="block-name">Job Niche</h4>
                     <form action="">
-                        <div class="field-wrap sel-wrap sel-wrap-default grey search">
-                            <select class="ui fluid search dropdown" data-placeholder='Skills' multiple="">
-            
-                                <option value="php">php</option>
-                                <option value="css">CSS</option>
-                                <option value="UI">UI</option>
-                                <option value="UX">UX</option>
-                            </select>
+                        <div class="search-niche">
+                            <input type="text" id="search-input" onkeyup="myFunction()"
+                                   placeholder="" autocomplete="off" class="niche-select">
+                            <ul id="search-list">
+                            </ul>
                         </div>
-                        <div class="field-wrap sel-wrap sel-wrap-default job-type">
-                            <div class="dropdown checkdown ">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                        data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
-                                    Job Type
-                                </button>
-                                <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
-                                    <div class="field-wrap sel-wrap sel-wrap-default">
-                                        <input id="checkbox1" type="checkbox"> <label for="checkbox1">Full-time</label>
-                                    </div>
-                                    <div class="field-wrap sel-wrap sel-wrap-default">
-                                        <input id="checkbox2" type="checkbox"> <label for="checkbox2"> Contract</label>
-                                    </div>
-                                    <div class="field-wrap sel-wrap sel-wrap-default">
-                                        <input id="checkbox3" type="checkbox"> <label for="checkbox3"> Permanant</label>
-                                    </div>
-                                    <div class="field-wrap sel-wrap sel-wrap-default">
-                                        <input id="checkbox4" type="checkbox" checked> <label for="checkbox4"> Part
-                                        Time</label>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="views-list">
                         </div>
-                
-                        <div class="field-wrap sel-wrap sel-wrap-default grey">
-                            <div class="dropdown checkdown drop2">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3"
-                                        data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
-                                    Industry
-                                </button>
-                                <div class="dropdown-menu " aria-labelledby="dropdownMenuButton3">
-                                    <div class="field-wrap sel-wrap sel-wrap-default">
-                                        <input id="checkbox13" type="checkbox"> <label for="checkbox13">Full-time</label>
-                                    </div>
-                                    <div class="field-wrap sel-wrap sel-wrap-default">
-                                        <input id="checkbox23" type="checkbox"> <label for="checkbox23"> Contract</label>
-                                    </div>
-                                    <div class="field-wrap sel-wrap sel-wrap-default">
-                                        <input id="checkbox33" type="checkbox"> <label for="checkbox33"> Permanant</label>
-                                    </div>
-                                    <div class="field-wrap sel-wrap sel-wrap-default">
-                                        <input id="checkbox43" type="checkbox" checked> <label for="checkbox41"> Part
-                                        Time</label>
-                                    </div>
-                                </div>
-                            </div>
-                
-                        </div>
-                        <div class="field-wrap sel-wrap sel-wrap-default grey">
-                            <div class="dropdown checkdown ">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                                        data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
-                                    Company
-                                </button>
-                                <div class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
-                                    <div class="field-wrap sel-wrap sel-wrap-default">
-                                        <input id="checkbox11" type="checkbox"> <label for="checkbox11">Full-time</label>
-                                    </div>
-                                    <div class="field-wrap sel-wrap sel-wrap-default">
-                                        <input id="checkbox21" type="checkbox"> <label for="checkbox21"> Contract</label>
-                                    </div>
-                                    <div class="field-wrap sel-wrap sel-wrap-default">
-                                        <input id="checkbox31" type="checkbox"> <label for="checkbox31"> Permanant</label>
-                                    </div>
-                                    <div class="field-wrap sel-wrap sel-wrap-default">
-                                        <input id="checkbox41" type="checkbox" checked> <label for="checkbox41"> Part
-                                        Time</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="field-wrap sel-wrap sel-wrap-default grey search">
-                            <select class="ui fluid search dropdown" data-placeholder='Skills' multiple="">
-                        
-                                <option value="php">php</option>
-                                <option value="css">CSS</option>
-                                <option value="UI">UI</option>
-                                <option value="UX">UX</option>
-                            </select>
+                    </form>
+                    <form action="" class="niche">
+                        <div class="add-niche">
+                            <input type="text" name="jobNiche" placeholder="Add new..." id="name"/>
+                            <button class="push-value" type="button">+</button>
                         </div>
                     </form>
                 </div>
-                
+                <div class="niches-kay">
+                    <h4 class="block-name">Keywords</h4>
+                    <div class="keyword">
+                        <div class="keyw">
+                            <ul id="keyword-list" class="nav nav-tabs">
+                            </ul>
+                            <div class="tab-content">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="" class="keywoard">
+                        <div class="add-keywoard">
+                                <input type="text" name="jobKey" placeholder="Add new..." id="key"/>
+                                <button class="push-key" type="button">+</button>
+                        </div>
+                    </form>
+
+                    <form action="" class="send-all">
+                        <div class="group-button">
+                            <button type="submit" class="btn reset">Reset</button>
+                            <button type="submit" class="btn save">Save</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-       
+
         <div class="wrapper main-content">
             <div class="container">
                 <div class="wrapper">
-                   <div class="row">
-                       <div class="col-xs-12 col-lg-8">
-                           <div class="job-body">
-                               <div class="job-header">
-                                   <div class="item-logo col-xs-12 col-md-2">
-                                       <img src="img/item1.png">
-                                   </div>
-                                   <div class="technology col-xs-12 col-md-4">
-                                       <h4>Senior Web Designer</h4>
-                                       <h5>Openlane</h5>
-                                       <div class="count">4 application</div>
-                                       <ul class="skills">
-                                           <li>php</li>
-                                           <li>UX</li>
-                                           <li>UI</li>
-                                       </ul>
-                                   </div>
-                                   <div class="col-xs-12 col-md-3 about">
-                                       <div class="location">
-                                           <span><i class="fa fa-map-marker" aria-hidden="true"></i>UK, Canada</span>
-                                       </div>
-                                       <div class="time">
-                                           <span>Full time</span>
-                                       </div>
-                                       <div class="post-time">
-                                           <span><i class="fa fa-clock-o" aria-hidden="true"></i>1 Dayago</span>
-                                       </div>
-                                       <div class="views">
-                                           <span><i class="fa fa-eye" aria-hidden="true"></i>38 views</span>
-                                       </div>
-                                   </div>
-                                   <div class="col-xs-12 watch col-md-3">
-                                       <div class="option">
-                                           <a href="#" class="btn btn-view">View</a>
-                                           <a href="#" class="btn btn-save">
-                                               <i class="fa fa-star" aria-hidden="true"></i>
-                                               Save
-                                           </a>
-                                           <a href="#" class="btn btn-expand">
-                                               <i class="fa fa-angle-double-down" aria-hidden="true"></i>
-                                               Expand
-                                           </a>
-                                           <a href="#" class="btn btn-share">
-                                               <i class="fa fa-share-alt" aria-hidden="true"></i>
-                                               Share
-                                           </a>
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="job-description">
-                                   <p>
-                                       We’re looking for an experienced UI Designer to join our team in Canada. As a designer at
-                                       New
-                                       Haircut, you will need to create visually appealing interactive prototypes for web & mobile
-                                       digital
-                                       products. You’ll be working side by side with the client, product managers, engineers,
-                                       researchers,
-                                       and other designers.
-                                   </p>
-                                   <h4>Skills:</h4>
-                                   <ul class="skills">
-                                       <li>php</li>
-                                       <li>UX</li>
-                                       <li>UI</li>
-                                   </ul>
-                                   <h4>Qualifications:</h4>
-                                   <p>
-                                       Demonstrable UI design skills with a strong portfolio<br>
-                                       +3 year experience in web and/or mobile applications design<br>
-                                       Strong talent for visual design, layout, and typography with excellent attention to
-                                       detail<br>
-                                       Proficiency in tools such as Sketch, InVision, Photoshop & Illustrator<br>
-                                       Communication: strong writing and presentation skills <br>
-                                       Problem Solving: ability to solve problems creatively and effectively <br>
-                                       Mindset: a clear understanding of the importance of user-centered design; willingness to
-                                       seek
-                                       and receive feedback; ability to self-manage and autonomy <br>
-                                       Up-to-date with the latest design trends, techniques, and best practices.<br>
-                                       Proficient in English<br>
-                                       Willing to travel internationally:20%
-                                   </p>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="col-xs-12 col-lg-4">
-                           <div class="content-banner">
-                           </div>
-                       </div>
-                   </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-8">
+                            <div class="job-body">
+                                <div class="job-header">
+                                    <div class="item-logo col-xs-12 col-md-2">
+                                        <img src="img/item1.png">
+                                    </div>
+                                    <div class="technology col-xs-12 col-md-4">
+                                        <h4>Senior Web Designer</h4>
+                                        <h5>Openlane</h5>
+                                        <div class="count">4 application</div>
+                                        <ul class="skills">
+                                            <li>php</li>
+                                            <li>UX</li>
+                                            <li>UI</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-12 col-md-3 about">
+                                        <div class="location">
+                                            <span><i class="fa fa-map-marker" aria-hidden="true"></i>UK, Canada</span>
+                                        </div>
+                                        <div class="time">
+                                            <span>Full time</span>
+                                        </div>
+                                        <div class="post-time">
+                                            <span><i class="fa fa-clock-o" aria-hidden="true"></i>1 Dayago</span>
+                                        </div>
+                                        <div class="views">
+                                            <span><i class="fa fa-eye" aria-hidden="true"></i>38 views</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 watch col-md-3">
+                                        <div class="option">
+                                            <a href="#" class="btn btn-view">View</a>
+                                            <a href="#" class="btn btn-save">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                Save
+                                            </a>
+                                            <a href="#" class="btn btn-expand">
+                                                <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                                                Expand
+                                            </a>
+                                            <a href="#" class="btn btn-share">
+                                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                                Share
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="job-description" id="description" onmouseup="getSelectionHtml();">
+                                    <p>
+                                        We’re looking for an experienced UI Designer to join our team in Canada. As a
+                                        designer at
+                                        New
+                                        Haircut, you will need to create visually appealing interactive prototypes for
+                                        web & mobile
+                                        digital
+                                        products. You’ll be working side by side with the client, product managers,
+                                        engineers,
+                                        researchers,
+                                        and other designers.
+                                    </p>
+                                    <h4>Skills:</h4>
+                                    <ul class="skills">
+                                        <li>php</li>
+                                        <li>UX</li>
+                                        <li>UI</li>
+                                    </ul>
+                                    <h4>Qualifications:</h4>
+                                    <p>
+                                        Demonstrable UI design skills with a strong portfolio<br>
+                                        +3 year experience in web and/or mobile applications design<br>
+                                        Strong talent for visual design, layout, and typography with excellent attention
+                                        to
+                                        detail<br>
+                                        Proficiency in tools such as Sketch, InVision, Photoshop & Illustrator<br>
+                                        Communication: strong writing and presentation skills <br>
+                                        Problem Solving: ability to solve problems creatively and effectively <br>
+                                        Mindset: a clear understanding of the importance of user-centered design;
+                                        willingness to
+                                        seek
+                                        and receive feedback; ability to self-manage and autonomy <br>
+                                        Up-to-date with the latest design trends, techniques, and best practices.<br>
+                                        Proficient in English<br>
+                                        Willing to travel internationally:20%
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-lg-4">
+                            <div class="content-banner">
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="row content-box featured-job clearfix">
                         <div class="wrapper">
                             <h3>RECOMMENDED JOBS</h3>
@@ -287,10 +246,10 @@
                                             <span class="save">Save</span>
                                         </div>
                                     </div>
-                
+
                                     <div class="watch">
                                         <button class="view-button btn">View</button>
-                
+
                                     </div>
                                 </div>
                                 <div class="item">
@@ -329,7 +288,7 @@
                                     </div>
                                     <div class="watch">
                                         <button class="view-button btn">View</button>
-                
+
                                     </div>
                                 </div>
                                 <div class="item">
@@ -366,10 +325,10 @@
                                             <span class="save">Save</span>
                                         </div>
                                     </div>
-                
+
                                     <div class="watch">
                                         <button class="view-button btn">View</button>
-                
+
                                     </div>
                                 </div>
                                 <div class="item">
@@ -408,10 +367,10 @@
                                     </div>
                                     <div class="watch">
                                         <button class="view-button btn">View</button>
-                
+
                                     </div>
                                 </div>
-        
+
                             </div>
                         </div>
                     </div>
@@ -429,18 +388,19 @@
             </div>
             <div class="row form-group">
                 <div class="col-md-9">
-                    <input type="email" name="subscribe" placeholder="Your Email Address" class="form-control subscribe">
+                    <input type="email" name="subscribe" placeholder="Your Email Address"
+                           class="form-control subscribe">
                 </div>
                 <div class="col-md-3">
                     <button type="submit" class="btn subscribe-btn">Notify Me</button>
                 </div>
             </div>
         </div>
-       
+
     </div>
 </main>
 <footer>
-    
+
     <div class="wrapper">
         <div class="footer-info">
             <div class="container-fluid">
@@ -489,7 +449,6 @@
 </body>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
-<script src="js/bootstrap-select.js"></script>
 <script src="js/modernizr-custom.js"></script>
 <script src="js/typeahead.bundle.min.js"></script>
 <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -507,7 +466,13 @@
 <script src="js/map.js"></script>
 <script src="js/dropdown.js"></script>
 <script src="js/transition.js"></script>
+<script src="js/mark.js"></script>
+<script src="js/mark.min.js"></script>
+<script src="js/jquery.mark.js"></script>
+<script src="js/jquery.mark.min.js"></script>
+<script src="js/fixIERangeObject.js"></script>
 <script src="js/main.js"></script>
+<script src="js/bootstrap-select.js"></script>
 </html>
 
 

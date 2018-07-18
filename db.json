@@ -1,0 +1,69 @@
+{
+  "job": [
+    {
+      "jobID": 1,
+      "jobNiche": "PHP",
+      "jobSelected": false,
+      "jobCheck": false,
+      "kaywords": [
+        {
+          "keyID": 1,
+          "keyText": "Demonstrable"
+        },
+        {
+          "keyID": 2,
+          "keyText": "UI"
+        }
+      ]
+    },
+    {
+      "jobID": 2,
+      "jobNiche": "Python",
+      "jobSelected": false,
+      "jobCheck": false,
+      "kaywords": [
+        {
+          "keyID": 1,
+          "keyText": "Sketch"
+        }
+
+      ]
+    },
+    {
+      "jobID": 3,
+      "jobNiche": "UI",
+      "jobSelected": false,
+      "jobCheck": false,
+      "kaywords": [
+        {
+          "keyID": 1,
+          "keyText": "Proficiency"
+        }
+      ]
+    },
+    {
+      "jobID": 4,
+      "jobNiche": "PHP7",
+      "jobSelected": false,
+      "jobCheck": false,
+      "kaywords": [
+        {
+          "keyID": 1,
+          "keyText": "Photoshop"
+        }
+      ]
+    },
+    {
+      "jobID": 5,
+      "jobNiche": "C++",
+      "jobSelected": false,
+      "jobCheck": false,
+      "kaywords": [
+        {
+          "keyID": 1,
+          "keyText": "Modelling"
+        }
+      ]
+    }
+  ]
+}

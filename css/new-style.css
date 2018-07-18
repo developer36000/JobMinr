@@ -8,6 +8,8 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar {
   width: 5px;
+  margin-top: -5px;
+  margin-bottom: -5px;
   background-color: transparent; }
 
 body::-webkit-scrollbar-thumb {
@@ -666,7 +668,7 @@ ul.skills {
       font-size: 18px;
       line-height: 24px; }
     .job-body .job-header .about .fa {
-      font-family: FontAwesome,sans-serif;
+      font-family: FontAwesome, sans-serif;
       padding-right: 5px; }
     .job-body .job-header .about .time {
       margin-bottom: 10px;
@@ -713,40 +715,244 @@ ul.skills {
   .footer-info .about p {
     margin: 0 auto; } }
 
-.company-page main,
+#search-list::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  background-color: transparent;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+#search-list::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent; }
+
+#search-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  background: #4CACD1; }
+
+.tab-content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  background-color: transparent; }
+
+.tab-content::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent; }
+
+.tab-content::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  background: #4CACD1; }
+
+.search-niche {
+  display: block;
+  position: relative; }
+
+#search-input {
+  width: 100%;
+  font-size: 16px;
+  padding: 5px 20px 5px 20px;
+  border: 1px solid #a4d5e7;
+  margin-bottom: 0;
+  border-radius: 15px;
+  display: block;
+  background: url("../img/search.png") no-repeat #fff;
+  background-position: 95% 40%; }
+
+#search-input:after {
+  font-family: FontAwesome, sans-serif;
+  content: '\f002'; }
+
+#search-input:hover,
+#search-input:focus {
+  border-radius: 15px;
+  outline: none; }
+
+#search-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  max-height: 177px;
+  overflow-y: scroll;
+  overflow-x: hidden; }
+
+.job-niches {
+  border-bottom: 1px solid #959595;
+  padding-bottom: 35px;
+  margin-bottom: 28px; }
+
+.search-niche:hover #search-list {
+  display: block;
+  position: absolute;
+  background: #fff;
+  box-shadow: 1px 10px 14px -3px #ccc;
+  width: 100%;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  z-index: 1111;
+  border: 1px solid #a4d5e7;
+  border-top: none;
+  margin-top: 19px;
+  padding-top: 19px;
+  top: 0;
+  outline: none; }
+.search-niche:hover #search-input {
+  z-index: 3000;
+  position: relative;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom: 1px solid transparent; }
+
+.input-group-addon {
+  font-family: FontAwesome, sans-serif; }
+
+.views-list {
+  margin-top: 3px; }
+
+.sidebar-left .views-list label {
+  margin-left: 0; }
+
+.sidebar-left form {
+  margin-bottom: 12px; }
+
+.keyw .tab-content {
+  min-height: 120px;
+  max-height: 125px;
+  margin-bottom: 20px;
+  overflow-y: scroll; }
+  .keyw .tab-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .keyw .tab-content ul li {
+      font-size: 18px; }
+
+.select-key {
+  background: #a4d5e7; }
+
+#keyword-list {
+  border-bottom: 1px solid transparent; }
+  #keyword-list li.active a {
+    border: 1px solid transparent;
+    font-size: 16px;
+    text-decoration: underline;
+    color: #4CACD1; }
+  #keyword-list li a {
+    font-size: 16px;
+    padding: 0 10px;
+    color: #959595;
+    line-height: 24px; }
+    #keyword-list li a:hover {
+      border: 1px solid transparent; }
+
+.add-niche {
+  background: none;
+  position: relative;
+  border-bottom: 2px solid #959595;
+  max-width: 95%; }
+  .add-niche input#name {
+    border: none;
+    width: 100%;
+    font-size: 16px; }
+    .add-niche input#name:hover, .add-niche input#name:focus {
+      outline: 0; }
+  .add-niche button {
+    background: none;
+    border: none;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    color: #a4d5e7;
+    top: -3px;
+    font-size: 27px;
+    padding: 0;
+    margin: 0; }
+    .add-niche button:hover, .add-niche button:focus {
+      outline: none;
+      cursor: pointer; }
+
+.add-keywoard {
+  background: none;
+  position: relative;
+  border-bottom: 2px solid #959595;
+  max-width: 95%; }
+  .add-keywoard input#key {
+    border: none;
+    width: 100%;
+    font-size: 16px; }
+    .add-keywoard input#key:hover, .add-keywoard input#key:focus {
+      outline: 0; }
+  .add-keywoard button {
+    background: none;
+    border: none;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    color: #a4d5e7;
+    top: -3px;
+    font-size: 27px;
+    padding: 0;
+    margin: 0; }
+    .add-keywoard button:hover, .add-keywoard button:focus {
+      color: #4CACD1;
+      outline: none;
+      cursor: pointer; }
+
+.tab-content li {
+  position: relative; }
+  .tab-content li button {
+    background: transparent;
+    color: #a4d5e7;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    border: none; }
+    .tab-content li button:hover {
+      color: #4CACD1; }
+
+.editKey {
+  right: 30px; }
+
+.removeKey {
+  right: 10px; }
+
+.send-all button {
+  width: 49%;
+  border-radius: 15px;
+  color: #fff; }
+  .send-all button.save {
+    background-color: #53B743; }
+  .send-all button.reset {
+    background-color: #4CACD1; }
+  .send-all button:hover, .send-all button:focus {
+    color: #fff; }
+
 .login-page main {
   padding-top: 120px;
   padding-bottom: 40px; }
 @media (max-width: 768px) {
-  .company-page .wrapper,
   .login-page .wrapper {
     max-width: 100%; }
-  .company-page .container,
   .login-page .container {
     width: 100% !important; } }
 @media (min-width: 768px) {
-  .company-page .container,
   .login-page .container {
     width: 750px !important; } }
 @media (min-width: 992px) {
-  .company-page .wrapper,
   .login-page .wrapper {
     max-width: 970px; }
-  .company-page .container,
   .login-page .container {
     width: 970px !important; } }
 @media (min-width: 1200px) {
-  .company-page .wrapper,
   .login-page .wrapper {
     max-width: 1170px; }
-  .company-page .container,
   .login-page .container {
     width: 1170px !important; } }
 @media (min-width: 1235px) {
-  .company-page .wrapper,
   .login-page .wrapper {
     max-width: 1235px; }
-  .company-page .container,
   .login-page .container {
     width: 1235px !important; } }
 
